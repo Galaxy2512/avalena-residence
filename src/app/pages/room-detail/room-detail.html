@@ -1,0 +1,108 @@
+@if (data() && unit && room) {
+<article class="room-page">
+
+  <section class="room-hero">
+    <img class="room-hero__image" [src]="activeImage()" [alt]="roomName" />
+    <div class="room-hero__overlay"></div>
+    <div class="room-hero__content container">
+      <span class="eyebrow eyebrow--light">{{ unit.name }}</span>
+      <h1>{{ roomName }}</h1>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="room-breadcrumb">
+      <a routerLink="/">{{ 'BREADCRUMB.HOME' | translate }}</a>
+      <span>/</span>
+      <a [routerLink]="['/smjestaj', unit.id]">{{ unit.name }}</a>
+      <span>/</span>
+      <span class="is-current">{{ roomName }}</span>
+    </nav>
+  </div>
+
+  <section class="room-detail container">
+    <div class="room-detail__main">
+      <span class="eyebrow">{{ 'ROOM.AMENITIES' | translate }}</span>
+      <h2>{{ roomName }}</h2>
+      <p class="room-detail__desc">{{ roomDesc }}</p>
+
+      <div class="room-detail__section">
+        <h4>{{ lang.current() === 'hr' ? 'Kreveti' : 'Beds' }}</h4>
+        <div class="beds-list">
+          @for (bed of room.beds; track bed.type) {
+            <div class="bed-item">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3">
+                <path d="M2 20v-8a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v8"/><path d="M4 10V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4"/><line x1="2" y1="20" x2="22" y2="20"/>
+              </svg>
+              {{ bed.count }}× {{ bedLabel(bed.type) }}
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="room-detail__section">
+        <h4>{{ 'ROOM.AMENITIES' | translate }}</h4>
+        <ul class="amenities-grid">
+          @for (a of amenities; track a) { <li>{{ a }}</li> }
+        </ul>
+      </div>
+    </div>
+
+    <aside class="room-sidebar">
+      <div class="room-sidebar__stats">
+        <div class="stat-row"><span>{{ 'ROOM.GUESTS_LABEL' | translate }}</span><strong>{{ room.guests }}</strong></div>
+        @if (room.sizeM2) { <div class="stat-row"><span>{{ 'ROOM.SIZE_LABEL' | translate }}</span><strong>{{ room.sizeM2 }} m²</strong></div> }
+        <div class="stat-row">
+          <span>{{ lang.current() === 'hr' ? 'Balkon' : 'Balcony' }}</span>
+          <strong>{{ room.hasBalcony ? (lang.current() === 'hr' ? 'Da' : 'Yes') : (lang.current() === 'hr' ? 'Ne' : 'No') }}</strong>
+        </div>
+      </div>
+      <a href="mailto:info&#64;avalena.hr" class="btn btn-outline-light">{{ 'ROOM.BOOK_CTA' | translate }}</a>
+      <a [routerLink]="['/smjestaj', unit.id]" class="btn" style="color:rgba(245,242,236,.5);border-color:rgba(255,255,255,.12);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;padding:.8rem 1.4rem">
+        ← {{ lang.current() === 'hr' ? 'Sve sobe' : 'All rooms' }}
+      </a>
+    </aside>
+  </section>
+
+  <section class="room-gallery container">
+    <span class="eyebrow">{{ 'ROOM.GALLERY_EYEBROW' | translate }}</span>
+    <h2>{{ 'ROOM.GALLERY_TITLE' | translate }}</h2>
+    <div class="rg-main"><img [src]="activeImage()" [alt]="roomName" /></div>
+    @if (room.gallery.length > 1) {
+      <div class="rg-thumbs">
+        @for (img of room.gallery; track img) {
+          <button type="button" class="rg-thumb" [class.is-active]="img === activeImage()" (click)="selectImage(img)">
+            <img [src]="img" [alt]="roomName" />
+          </button>
+        }
+      </div>
+    }
+  </section>
+
+  @if (otherRooms().length > 0) {
+  <section class="other-rooms container">
+    <span class="eyebrow">{{ 'ROOM.OTHER_ROOMS' | translate }}</span>
+    <h2>{{ lang.current() === 'hr' ? 'Ostale sobe — ' + unit.name : 'Other rooms at ' + unit.name }}</h2>
+    <div class="other-rooms__grid">
+      @for (r of otherRooms(); track r.id) {
+        <a [routerLink]="['/smjestaj', unit.id, r.id]" class="other-room">
+          <div class="other-room__img-wrap">
+            <img [src]="r.heroImage" [alt]="otherRoomName(r)" class="other-room__img" />
+          </div>
+          <div class="other-room__info">
+            <h4>{{ otherRoomName(r) }}</h4>
+            <span>{{ r.guests }} {{ 'UNIT.GUESTS' | translate }}</span>
+          </div>
+        </a>
+      }
+    </div>
+  </section>
+  }
+
+</article>
+} @else {
+<div class="not-found container">
+  <h2>{{ 'NOT_FOUND.TITLE' | translate }}</h2>
+  <a routerLink="/" class="btn btn-outline-dark">{{ 'NOT_FOUND.BACK' | translate }}</a>
+</div>
+}

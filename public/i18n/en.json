@@ -1,0 +1,78 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "BOOK": "Book Now"
+  },
+  "HOME": {
+    "LOCATION": "Borik, Zadar",
+    "SUBTITLE": "Four unique accommodation units, steps from the sea",
+    "CTA_SCROLL": "View accommodation",
+    "ABOUT_EYEBROW": "About Avalena",
+    "ABOUT_TITLE": "Your base for exploring Zadar",
+    "ABOUT_TEXT": "Avalena is located in the peaceful Borik neighbourhood, just 300 metres from the sea and a short drive from Zadar's historic Old Town. Four units, each with its own character and atmosphere, offer guests comfortable accommodation whether they're coming for a short break or a longer seaside stay.",
+    "UNITS_EYEBROW": "Accommodation",
+    "UNITS_TITLE": "Four units, each a story of its own",
+    "EXPLORE": "Explore →",
+    "LOCATION_EYEBROW": "Discover the area",
+    "LOCATION_TITLE": "Borik, Zadar",
+    "LOCATION_TEXT": "Borik is a peaceful resort area on the northwest edge of Zadar, known for its beaches, seaside promenades and views of the Zadar Channel and the island of Ugljan. Zadar's historic centre — home to the Sea Organ and Sun Salutation — is just a few minutes' drive away.",
+    "FACT_1_VALUE": "300 m",
+    "FACT_1_LABEL": "to the nearest beach",
+    "FACT_2_VALUE": "2.5 km",
+    "FACT_2_LABEL": "to Zadar Old Town",
+    "FACT_3_VALUE": "4",
+    "FACT_3_LABEL": "accommodation units",
+    "BOOK_EYEBROW": "Reservations",
+    "BOOK_TITLE": "Book your stay",
+    "BOOK_TEXT": "Contact us to enquire about availability, rates and special offers for longer stays.",
+    "BOOK_EMAIL": "Send enquiry",
+    "BOOK_PHONE": "+385 91 123 4567"
+  },
+  "UNIT": {
+    "ROOMS_EYEBROW": "Rooms & Apartments",
+    "ROOMS_TITLE": "Choose your room",
+    "GUESTS": "guests",
+    "BEDS": "beds",
+    "SIZE": "m²",
+    "FROM": "from",
+    "PER_NIGHT": "/ night",
+    "VIEW_ROOM": "View room →",
+    "AMENITIES_TITLE": "Amenities",
+    "GALLERY_EYEBROW": "Gallery",
+    "GALLERY_TITLE": "Spaces",
+    "OTHERS_EYEBROW": "Also explore",
+    "OTHERS_TITLE": "Other Avalena units",
+    "BOOK_CTA": "Enquire about booking",
+    "PRICE_FROM": "from",
+    "PRICE_NIGHT": "/ night"
+  },
+  "ROOM": {
+    "BACK": "Back",
+    "BEDS_LABEL": "Beds",
+    "GUESTS_LABEL": "Guests",
+    "SIZE_LABEL": "Size",
+    "AMENITIES": "Room amenities",
+    "GALLERY_EYEBROW": "Gallery",
+    "GALLERY_TITLE": "Room photos",
+    "BOOK_CTA": "Book this room",
+    "OTHER_ROOMS": "Other rooms",
+    "PER_NIGHT": "/ night"
+  },
+  "FOOTER": {
+    "DESC": "Four uniquely designed accommodation units in Borik, just minutes from the sea and the centre of Zadar.",
+    "ACCOMMODATION": "Accommodation",
+    "CONTACT": "Contact",
+    "ADDRESS": "Ul. Augusta Šenoe 22, Borik, Zadar",
+    "RESERVATIONS": "Reservations",
+    "RESERVATIONS_TEXT": "Contact us by email or phone to enquire about availability and rates — we respond within 24 hours.",
+    "RIGHTS": "All rights reserved."
+  },
+  "BREADCRUMB": {
+    "HOME": "Home",
+    "ACCOMMODATION": "Accommodation"
+  },
+  "NOT_FOUND": {
+    "TITLE": "Page not found",
+    "BACK": "Back to home"
+  }
+}

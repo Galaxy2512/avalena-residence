@@ -1,0 +1,78 @@
+{
+  "NAV": {
+    "HOME": "Početna",
+    "BOOK": "Rezervacija"
+  },
+  "HOME": {
+    "LOCATION": "Borik, Zadar",
+    "SUBTITLE": "Četiri jedinstvene smještajne jedinice, korak od mora",
+    "CTA_SCROLL": "Pogledaj smještaj",
+    "ABOUT_EYEBROW": "O Avaleni",
+    "ABOUT_TITLE": "Vaša baza za istraživanje Zadra",
+    "ABOUT_TEXT": "Avalena se nalazi u mirnom dijelu Borika, samo 300 metara od mora i nekoliko minuta vožnje od starog grada Zadra. Četiri jedinice, svaka sa svojim karakterom i ambijentom, pružaju gostima udoban smještaj bilo da dolaze na kratak odmor ili duži boravak na moru.",
+    "UNITS_EYEBROW": "Smještaj",
+    "UNITS_TITLE": "Četiri jedinice, svaka priča za sebe",
+    "EXPLORE": "Istraži →",
+    "LOCATION_EYEBROW": "Otkrijte okolicu",
+    "LOCATION_TITLE": "Borik, Zadar",
+    "LOCATION_TEXT": "Borik je mirno turističko područje na sjeverozapadu Zadra, poznato po plažama, šetnicama uz more i pogledu na Zadarski kanal i otok Ugljan. Stari grad Zadra, s poznatim Morskim orguljama i Pozdravom suncu, udaljen je svega nekoliko minuta vožnje.",
+    "FACT_1_VALUE": "300 m",
+    "FACT_1_LABEL": "do najbliže plaže",
+    "FACT_2_VALUE": "2,5 km",
+    "FACT_2_LABEL": "do starog grada Zadra",
+    "FACT_3_VALUE": "4",
+    "FACT_3_LABEL": "smještajne jedinice",
+    "BOOK_EYEBROW": "Rezervacije",
+    "BOOK_TITLE": "Rezervirajte svoj boravak",
+    "BOOK_TEXT": "Javite nam se za upit o dostupnim terminima, cijenama i posebnim ponudama za duže boravke.",
+    "BOOK_EMAIL": "Pošalji upit",
+    "BOOK_PHONE": "+385 91 123 4567"
+  },
+  "UNIT": {
+    "ROOMS_EYEBROW": "Sobe i apartmani",
+    "ROOMS_TITLE": "Odaberite sobu",
+    "GUESTS": "gostiju",
+    "BEDS": "ležaja",
+    "SIZE": "m²",
+    "FROM": "od",
+    "PER_NIGHT": "/ noć",
+    "VIEW_ROOM": "Pogledaj sobu →",
+    "AMENITIES_TITLE": "Sadržaji",
+    "GALLERY_EYEBROW": "Galerija",
+    "GALLERY_TITLE": "Prostori",
+    "OTHERS_EYEBROW": "Pogledajte i",
+    "OTHERS_TITLE": "Ostale jedinice u Avaleni",
+    "BOOK_CTA": "Upit za rezervaciju",
+    "PRICE_FROM": "od",
+    "PRICE_NIGHT": "/ noć"
+  },
+  "ROOM": {
+    "BACK": "Natrag",
+    "BEDS_LABEL": "Kreveti",
+    "GUESTS_LABEL": "Gosti",
+    "SIZE_LABEL": "Površina",
+    "AMENITIES": "Sadržaji sobe",
+    "GALLERY_EYEBROW": "Galerija",
+    "GALLERY_TITLE": "Fotografije sobe",
+    "BOOK_CTA": "Rezerviraj ovu sobu",
+    "OTHER_ROOMS": "Ostale sobe",
+    "PER_NIGHT": "/ noć"
+  },
+  "FOOTER": {
+    "DESC": "Četiri jedinstveno uređene smještajne jedinice u Boriku, samo nekoliko minuta hoda od mora i centra Zadra.",
+    "ACCOMMODATION": "Smještaj",
+    "CONTACT": "Kontakt",
+    "ADDRESS": "Ul. Augusta Šenoe 22, Borik, Zadar",
+    "RESERVATIONS": "Rezervacije",
+    "RESERVATIONS_TEXT": "Za upit o slobodnim terminima i cijenama javite nam se putem e-maila ili telefona — odgovaramo u roku od 24 sata.",
+    "RIGHTS": "Sva prava pridržana."
+  },
+  "BREADCRUMB": {
+    "HOME": "Početna",
+    "ACCOMMODATION": "Smještaj"
+  },
+  "NOT_FOUND": {
+    "TITLE": "Stranica nije pronađena",
+    "BACK": "Povratak na početnu"
+  }
+}

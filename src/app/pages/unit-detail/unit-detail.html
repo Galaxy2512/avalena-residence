@@ -1,0 +1,133 @@
+@if (unit()) {
+<article class="unit-page">
+
+  <section class="unit-hero">
+    <img class="unit-hero__image" [src]="unit()!.heroImage" [alt]="unit()!.name" />
+    <div class="unit-hero__overlay"></div>
+    <div class="unit-hero__content container">
+      <span class="eyebrow eyebrow--light">{{ tagline(unit()!) }}</span>
+      <h1>{{ unit()!.name }}</h1>
+    </div>
+  </section>
+
+  <div class="container">
+    <nav class="unit-breadcrumb">
+      <a routerLink="/">{{ 'BREADCRUMB.HOME' | translate }}</a>
+      <span>/</span>
+      <span class="is-current">{{ unit()!.name }}</span>
+    </nav>
+  </div>
+
+  <section class="unit-about container">
+    <div>
+      <span class="eyebrow">{{ 'UNIT.AMENITIES_TITLE' | translate }}</span>
+      <h2>{{ unit()!.name }}</h2>
+      <p>{{ desc(unit()!) }}</p>
+    </div>
+    <aside class="unit-about__sidebar">
+      <h4>{{ lang.current() === 'hr' ? 'Lokacija' : 'Location' }}</h4>
+      <p class="unit-about__addr">{{ lang.current() === 'hr' ? unit()!.addressHr : unit()!.addressEn }}</p>
+      <div class="unit-about__stats">
+        <div class="unit-about__stat-row">
+          <span>{{ lang.current() === 'hr' ? 'Br. jedinica' : 'Room types' }}</span>
+          <strong>{{ unit()!.rooms.length }}</strong>
+        </div>
+      </div>
+      <a href="mailto:info&#64;avalena.hr" class="btn btn-outline-light" style="margin-top:.5rem">
+        {{ 'UNIT.BOOK_CTA' | translate }}
+      </a>
+    </aside>
+  </section>
+
+  <!-- SOBE -->
+  <section class="rooms container">
+    <div class="rooms__header">
+      <span class="eyebrow">{{ 'UNIT.ROOMS_EYEBROW' | translate }}</span>
+      <h2>{{ 'UNIT.ROOMS_TITLE' | translate }}</h2>
+    </div>
+
+    @for (room of unit()!.rooms; track room.id; let i = $index) {
+      <div class="room-card" [class.room-card--reverse]="i % 2 === 1">
+        <div class="room-card__img-wrap">
+          <img [src]="room.heroImage" [alt]="roomName(room)" class="room-card__img" />
+
+        </div>
+
+        <div class="room-card__content">
+          <h3>{{ roomName(room) }}</h3>
+          <p class="room-card__desc">{{ roomDesc(room) }}</p>
+
+          <div class="room-card__beds">
+            @for (bed of room.beds; track bed.type) {
+              <span class="bed-tag">{{ bed.count }}× {{ bedLabel(bed.type) }}</span>
+            }
+          </div>
+
+          <ul class="room-card__icons">
+            <li>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              {{ room.guests }} {{ 'UNIT.GUESTS' | translate }}
+            </li>
+            @if (room.sizeM2) {
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="1"/></svg>
+                {{ room.sizeM2 }} {{ 'UNIT.SIZE' | translate }}
+              </li>
+            }
+            @if (room.hasBalcony) {
+              <li>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                {{ lang.current() === 'hr' ? 'Balkon' : 'Balcony' }}
+              </li>
+            }
+          </ul>
+
+          <a [routerLink]="['/smjestaj', unit()!.id, room.id]" class="btn btn-outline-dark">
+            {{ 'UNIT.VIEW_ROOM' | translate }}
+          </a>
+        </div>
+      </div>
+    }
+  </section>
+
+  <!-- GALERIJA -->
+  <section class="unit-gallery container">
+    <span class="eyebrow">{{ 'UNIT.GALLERY_EYEBROW' | translate }}</span>
+    <h2>{{ 'UNIT.GALLERY_TITLE' | translate }}</h2>
+    <div class="gallery-main"><img [src]="activeImage()" [alt]="unit()!.name" /></div>
+    <div class="gallery-thumbs">
+      @for (img of unit()!.gallery; track img) {
+        <button type="button" class="gallery-thumb" [class.is-active]="img === activeImage()" (click)="selectImage(img)">
+          <img [src]="img" [alt]="unit()!.name" />
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- OSTALE JEDINICE -->
+  <section class="unit-others">
+    <div class="container">
+      <span class="eyebrow">{{ 'UNIT.OTHERS_EYEBROW' | translate }}</span>
+      <h2>{{ 'UNIT.OTHERS_TITLE' | translate }}</h2>
+      <div class="others-grid">
+        @for (other of otherUnits(unit()); track other.id) {
+          <a [routerLink]="['/smjestaj', other.id]" class="other-card">
+            <img [src]="other.heroImage" [alt]="other.name" />
+            <div class="other-card__overlay"></div>
+            <div class="other-card__info">
+              <span class="other-card__name">{{ other.name }}</span>
+              <span class="other-card__rooms">{{ other.rooms.length }} {{ lang.current() === 'hr' ? 'kategorija' : 'room types' }}</span>
+            </div>
+          </a>
+        }
+      </div>
+    </div>
+  </section>
+
+</article>
+} @else {
+<div class="not-found container">
+  <h2>{{ 'NOT_FOUND.TITLE' | translate }}</h2>
+  <a routerLink="/" class="btn btn-outline-dark">{{ 'NOT_FOUND.BACK' | translate }}</a>
+</div>
+}

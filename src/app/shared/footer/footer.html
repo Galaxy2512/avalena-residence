@@ -1,0 +1,41 @@
+<footer class="footer" id="kontakt">
+  <div class="footer__top">
+
+    <div class="footer__brand">
+      <img src="avalena-logo.svg" alt="Avalena" class="footer__logo" />
+      <p class="footer__tagline">{{ 'FOOTER.DESC' | translate }}</p>
+      <div class="footer__social">
+        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+
+    <div class="footer__col">
+      <h4>{{ 'FOOTER.ACCOMMODATION' | translate }}</h4>
+      <ul>
+        @for (unit of units; track unit.id) {
+          <li><a [routerLink]="['/smjestaj', unit.id]">{{ unit.name }}</a></li>
+        }
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>{{ 'FOOTER.CONTACT' | translate }}</h4>
+      <address>{{ 'FOOTER.ADDRESS' | translate }}</address>
+      <ul style="margin-top:1rem">
+        <li><a href="tel:+385911234567">+385 91 123 4567</a></li>
+        <li><a href="mailto:info&#64;avalena.hr">info&#64;avalena.hr</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h4>{{ 'FOOTER.RESERVATIONS' | translate }}</h4>
+      <p>{{ 'FOOTER.RESERVATIONS_TEXT' | translate }}</p>
+    </div>
+
+  </div>
+
+  <div class="footer__bottom container">
+    <span class="footer__copy">&copy; {{ year }} Avalena · {{ 'FOOTER.RIGHTS' | translate }}</span>
+  </div>
+</footer>

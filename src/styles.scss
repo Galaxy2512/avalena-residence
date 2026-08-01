@@ -1,0 +1,117 @@
+/* =========================================================
+   AVALENA — Mediteranska oaza
+   Paleta: Zlatni pijesak · Duboka plava · Bijela · Krem
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap');
+
+:root {
+  /* ── Mediteranska paleta ───────────────────────── */
+  --c-navy: #856b4e;   /* Duboka plava — ancre */
+  --c-navy-dark:  #111c33;   /* Još tamnija plava za footer/hero overlay */
+  --c-gold: #856b4e;   /* Zlatna — akcent */
+  --c-gold-light: #856b4e;   /* Svjetlija zlatna */
+  --c-sand:       #f0e6d3;   /* Topli pijesak — pozadina sekcija */
+  --c-sand-dark:  #e4d5bc;   /* Tamniji pijesak — kartice, borderi */
+  --c-cream:      #faf7f2;   /* Gotovo bijela krem — glavna pozadina */
+  --c-white:      #ffffff;
+  --c-charcoal:   #2c2c2c;   /* Tamni tekst */
+  --c-stone: #856b4e;   /* Sivi tekst — sekundarni */
+  --c-stone-light:#b8afa4;   /* Još svjetliji za placeholder */
+
+  /* ── Fontovi ───────────────────────────────────── */
+  --f-serif: 'Cormorant Garamond', 'Georgia', serif;
+  --f-sans:  'Jost', 'Helvetica Neue', Arial, sans-serif;
+
+  /* ── Layout ─────────────────────────────────────── */
+  --max-w:    1300px;
+  --nav-h:    78px;
+  --ease:     cubic-bezier(.25,.46,.45,.94);
+  --ease-out: cubic-bezier(.23,1,.32,1);
+}
+
+/* ── Reset ──────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; scroll-behavior: smooth; }
+body {
+  font-family: var(--f-sans);
+  font-weight: 300;
+  color: var(--c-charcoal);
+  background: var(--c-cream);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+img  { display: block; max-width: 100%; }
+a    { text-decoration: none; color: inherit; }
+ul   { list-style: none; }
+button { font-family: var(--f-sans); cursor: pointer; border: none; background: none; }
+
+/* ── Tipografija ─────────────────────────────────── */
+h1, h2, h3, h4 {
+  font-family: var(--f-serif);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: .01em;
+}
+
+/* ── Utility ─────────────────────────────────────── */
+.container { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
+
+.eyebrow {
+  display: block;
+  font-family: var(--f-sans);
+  font-size: .66rem;
+  font-weight: 500;
+  letter-spacing: .26em;
+  text-transform: uppercase;
+  color: var(--c-gold);
+}
+.eyebrow--light { color: rgba(255,255,255,.55); }
+.eyebrow--navy  { color: var(--c-navy); opacity: .6; }
+
+/* ── Gumbi ───────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: .6rem;
+  padding: .9rem 2.2rem;
+  font-family: var(--f-sans); font-size: .68rem; font-weight: 400;
+  letter-spacing: .2em; text-transform: uppercase;
+  border: 1px solid currentColor;
+  transition: background .28s var(--ease), color .28s var(--ease), border-color .28s var(--ease);
+  white-space: nowrap; cursor: pointer;
+}
+.btn-gold {
+  background: var(--c-gold); color: var(--c-white); border-color: var(--c-gold);
+  &:hover { background: #a97a32; border-color: #a97a32; }
+}
+.btn-navy {
+  background: var(--c-navy); color: var(--c-white); border-color: var(--c-navy);
+  &:hover { background: var(--c-navy-dark); border-color: var(--c-navy-dark); }
+}
+.btn-outline-navy {
+  background: transparent; color: var(--c-navy); border-color: rgba(26,39,68,.3);
+  &:hover { background: var(--c-navy); color: var(--c-white); border-color: var(--c-navy); }
+}
+.btn-outline-light {
+  background: transparent; color: var(--c-white); border-color: rgba(255,255,255,.5);
+  &:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.8); }
+}
+.btn-outline-gold {
+  background: transparent; color: var(--c-gold); border-color: var(--c-gold);
+  &:hover { background: var(--c-gold); color: var(--c-white); }
+}
+
+/* ── Scroll reveal ───────────────────────────────── */
+.reveal {
+  opacity: 0; transform: translateY(28px);
+  transition: opacity .85s var(--ease-out), transform .85s var(--ease-out);
+  &.is-visible { opacity: 1; transform: none; }
+}
+.reveal-delay-1 { transition-delay: .15s; }
+.reveal-delay-2 { transition-delay: .3s; }
+.reveal-delay-3 { transition-delay: .45s; }
+
+/* ── Divider ─────────────────────────────────────── */
+.h-rule         { height: 1px; background: rgba(26,39,68,.1); }
+.h-rule--gold   { height: 1px; background: linear-gradient(90deg, transparent, var(--c-gold), transparent); opacity: .5; }
+.h-rule--light  { height: 1px; background: rgba(255,255,255,.12); }

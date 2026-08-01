@@ -57,3 +57,15 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+Prodcution build and zip command:
+
+cd ~/Desktop/avalena-residence
+
+ng build --configuration production
+
+rm -f ~/Desktop/avalena-residence-build.zip
+
+cd dist/kuca-za-najam/browser
+
+zip -r ~/Desktop/avalena-residence-build.zip .

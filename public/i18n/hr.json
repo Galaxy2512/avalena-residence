@@ -4,6 +4,7 @@
     "BOOK": "Rezervacija"
   },
   "HOME": {
+    "HERO_TITLE": "Mediteranska oaza u srcu Zadra...",
     "LOCATION": "Borik, Zadar",
     "SUBTITLE": "Četiri jedinstvene smještajne jedinice, korak od mora",
     "CTA_SCROLL": "Pogledaj smještaj",
@@ -19,7 +20,7 @@
     "FACT_1_VALUE": "300 m",
     "FACT_1_LABEL": "do najbliže plaže",
     "FACT_2_VALUE": "2,5 km",
-    "FACT_2_LABEL": "do starog grada Zadra",
+    "FACT_2_LABEL": "do stare gradske jezgre Zadra",
     "FACT_3_VALUE": "4",
     "FACT_3_LABEL": "smještajne jedinice",
     "BOOK_EYEBROW": "Rezervacije",

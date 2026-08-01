@@ -1,41 +1,101 @@
 <footer class="footer" id="kontakt">
   <div class="footer__top">
 
-    <div class="footer__brand">
-      <img src="avalena-logo.svg" alt="Avalena" class="footer__logo" />
-      <p class="footer__tagline">{{ 'FOOTER.DESC' | translate }}</p>
+    <!-- DRUŠTVENE MREŽE -->
+    <div class="footer__col footer__social-col">
+      <h4>Društvene mreže</h4>
+
       <div class="footer__social">
-        <a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a>
-        <a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a
+          href="https://www.facebook.com/61591653070226/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Avalena Facebook profil"
+        >
+          <i class="fa-brands fa-facebook-f" aria-hidden="true"></i>
+          <span>Facebook</span>
+        </a>
+
+        <a
+          href="https://www.instagram.com/avalenaresidence?igsh=MXYzc2ZwdW9ucnp6dw=="
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Avalena Residence Instagram profil"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span>Instagram Residence</span>
+        </a>
+
+        <a
+          href="https://www.instagram.com/avalenarooms?igsh=MW51bzZ2MnNjNmkxYg=="
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Avalena Rooms Instagram profil"
+        >
+          <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+          <span>Instagram Rooms</span>
+        </a>
       </div>
     </div>
 
+    <!-- SMJEŠTAJ -->
     <div class="footer__col">
       <h4>{{ 'FOOTER.ACCOMMODATION' | translate }}</h4>
+
       <ul>
         @for (unit of units; track unit.id) {
-          <li><a [routerLink]="['/smjestaj', unit.id]">{{ unit.name }}</a></li>
+          <li>
+            <a [routerLink]="['/smjestaj', unit.id]">
+              {{ unit.name }}
+            </a>
+          </li>
         }
       </ul>
     </div>
 
+    <!-- KONTAKT -->
     <div class="footer__col">
       <h4>{{ 'FOOTER.CONTACT' | translate }}</h4>
-      <address>{{ 'FOOTER.ADDRESS' | translate }}</address>
-      <ul style="margin-top:1rem">
-        <li><a href="tel:+385911234567">+385 91 123 4567</a></li>
-        <li><a href="mailto:info&#64;avalena.hr">info&#64;avalena.hr</a></li>
+
+      <address>
+        {{ 'FOOTER.ADDRESS' | translate }}
+
+      </address>
+      <address>
+
+        {{ 'FOOTER.ADDRESS_2' | translate }}
+      </address>
+
+      <ul class="footer__contact-list">
+        <li>
+          <a href="tel:+385914747453">
+            +385 91 4747 453
+          </a>
+        </li>
+
+        <li>
+          <a href="mailto:info&#64;avalena.hr">
+            info&#64;avalena.hr
+          </a>
+        </li>
       </ul>
     </div>
 
-    <div class="footer__col">
-      <h4>{{ 'FOOTER.RESERVATIONS' | translate }}</h4>
-      <p>{{ 'FOOTER.RESERVATIONS_TEXT' | translate }}</p>
+    <!-- LOGO -->
+    <div class="footer__logo-col">
+      <img
+        src="/avalena-logo-with-background.svg"
+        alt="Avalena Residence"
+        class="footer__logo"
+      />
     </div>
 
   </div>
 
-  <div class="footer__bottom container">
-    <span class="footer__copy">&copy; {{ year }} Avalena · {{ 'FOOTER.RIGHTS' | translate }}</span>
+  <div class="footer__bottom">
+    <span class="footer__copy">
+      &copy; {{ year }} Avalena ·
+      {{ 'FOOTER.RIGHTS' | translate }}
+    </span>
   </div>
 </footer>

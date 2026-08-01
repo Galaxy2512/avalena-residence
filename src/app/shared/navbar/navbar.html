@@ -1,33 +1,77 @@
-<header class="navbar" [class.is-scrolled]="isScrolled()" [class.is-open]="isMenuOpen()">
+<header
+  class="navbar"
+  [class.is-scrolled]="isScrolled()"
+  [class.is-open]="isMenuOpen()"
+>
   <div class="navbar__inner container">
 
-    <!--<a routerLink="/" class="navbar__logo" (click)="closeMenu()">
-      <img src="avalena-logo.svg" alt="Avalena" class="navbar__logo-img" />
+    <!-- LOGO UMJESTO LINKA POČETNA -->
+    <a
+      routerLink="/"
+      class="navbar__logo"
+      aria-label="Avalena početna stranica"
+      (click)="closeMenu()"
+    >
+      <img
+        [src]="
+          '/avalena-logo-transparent.svg'
+        "
+        alt="Avalena Residence"
+        class="navbar__logo-img"
+      />
     </a>
--->
-    <nav class="navbar__links" [class.is-open]="isMenuOpen()">
-      <a routerLink="/" routerLinkActive="is-active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">
-        {{ 'NAV.HOME' | translate }}
-      </a>
+
+    <!-- NAVIGACIJA -->
+    <nav
+      class="navbar__links"
+      [class.is-open]="isMenuOpen()"
+    >
       @for (unit of units; track unit.id) {
-        <a [routerLink]="['/smjestaj', unit.id]" routerLinkActive="is-active" (click)="closeMenu()">
+        <a
+          [routerLink]="['/smjestaj', unit.id]"
+          routerLinkActive="is-active"
+          (click)="closeMenu()"
+        >
           {{ unit.name }}
         </a>
       }
-
     </nav>
 
+    <!-- JEZIK -->
     <div class="navbar__actions">
-      <button class="navbar__lang" (click)="lang.toggle()" [attr.aria-label]="'Promijeni jezik'">
-        <span [class.is-active]="lang.current() === 'hr'">HR</span>
-        <span class="navbar__lang-sep">|</span>
-        <span [class.is-active]="lang.current() === 'en'">EN</span>
-      </button>
+      <button
+        type="button"
+        class="navbar__lang"
+        (click)="lang.toggle()"
+        aria-label="Promijeni jezik"
+      >
+        <span [class.is-active]="lang.current() === 'hr'">
+          HR
+        </span>
 
+        <span class="navbar__lang-sep">
+          |
+        </span>
+
+        <span [class.is-active]="lang.current() === 'en'">
+          EN
+        </span>
+      </button>
     </div>
 
-    <button class="navbar__burger" type="button" [class.is-open]="isMenuOpen()" (click)="toggleMenu()" aria-label="Meni">
-      <span></span><span></span><span></span>
+    <!-- MOBILNI MENI -->
+    <button
+      class="navbar__burger"
+      type="button"
+      [class.is-open]="isMenuOpen()"
+      (click)="toggleMenu()"
+      aria-label="Otvori ili zatvori izbornik"
+      [attr.aria-expanded]="isMenuOpen()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
+
   </div>
 </header>

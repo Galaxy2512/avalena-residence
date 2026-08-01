@@ -63,8 +63,9 @@
     "ACCOMMODATION": "Smještaj",
     "CONTACT": "Kontakt",
     "ADDRESS": "Ul. Augusta Šenoe 22, Borik, Zadar",
+    "ADDRESS_2": "Ul. Augusta Šenoe 27A, Borik, Zadar",
     "RESERVATIONS": "Rezervacije",
-    "RESERVATIONS_TEXT": "Za upit o slobodnim terminima i cijenama javite nam se putem e-maila ili telefona — odgovaramo u roku od 24 sata.",
+    "RESERVATIONS_TEXT": "Za upit o slobodnim terminima i cijenama javite nam se putem e-maila ili telefona",
     "RIGHTS": "Sva prava pridržana."
   },
   "BREADCRUMB": {

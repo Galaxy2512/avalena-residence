@@ -24,19 +24,7 @@
       <h2>{{ unit()!.name }}</h2>
       <p>{{ desc(unit()!) }}</p>
     </div>
-    <aside class="unit-about__sidebar">
-      <h4>{{ lang.current() === 'hr' ? 'Lokacija' : 'Location' }}</h4>
-      <p class="unit-about__addr">{{ lang.current() === 'hr' ? unit()!.addressHr : unit()!.addressEn }}</p>
-      <div class="unit-about__stats">
-        <div class="unit-about__stat-row">
-          <span>{{ lang.current() === 'hr' ? 'Br. jedinica' : 'Room types' }}</span>
-          <strong>{{ unit()!.rooms.length }}</strong>
-        </div>
-      </div>
-      <a href="mailto:info&#64;avalena.hr" class="btn btn-outline-light" style="margin-top:.5rem">
-        {{ 'UNIT.BOOK_CTA' | translate }}
-      </a>
-    </aside>
+
   </section>
 
   <!-- SOBE -->

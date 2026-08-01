@@ -22,7 +22,7 @@ export class Units {
         'Avalena Rooms offers a variety of room categories suited to couples, families and travellers looking for a comfortable stay in Borik. All rooms feature air conditioning, flat-screen TV, WiFi, a fridge and a private bathroom. Check-in from 15:00, check-out by 10:00.',
       addressHr: 'Ul. Augusta Šenoe 22, Borik, Zadar',
       addressEn: 'Ul. Augusta Šenoe 22, Borik, Zadar',
-      heroImage: '/images/rooms/581052507.jpg',
+      heroImage: '/images/rooms/684880052.jpg',
       gallery: [
         '/images/rooms/558049770.jpg',
         '/images/rooms/558689713.jpg',
@@ -66,8 +66,7 @@ export class Units {
             'Heating',
             'Electric kettle',
           ],
-          heroImage:
-            'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=85&w=1600&auto=format&fit=crop',
+          heroImage: '/images/rooms/558049770.jpg',
           gallery: [
             'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=85&w=1200&auto=format&fit=crop',
             'https://images.unsplash.com/photo-1560185007-5f0bb1866cab?q=85&w=1200&auto=format&fit=crop',
@@ -108,8 +107,7 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage:
-            'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=85&w=1600&auto=format&fit=crop',
+          heroImage: '/images/rooms/558689713.jpg', //treba mjenjati sve
           gallery: [
             'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=85&w=1200&auto=format&fit=crop',
             'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1200&auto=format&fit=crop',
@@ -152,8 +150,8 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage:
-            'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=85&w=1600&auto=format&fit=crop',
+          heroImage: '/images/rooms/563273867.jpg',
+
           gallery: [
             'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=85&w=1200&auto=format&fit=crop',
             'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=85&w=1200&auto=format&fit=crop',
@@ -193,8 +191,8 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage:
-            'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1600&auto=format&fit=crop',
+          heroImage: '/images/rooms/563273867.jpg',
+
           gallery: [
             'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1200&auto=format&fit=crop',
           ],
@@ -236,8 +234,8 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage:
-            'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=85&w=1600&auto=format&fit=crop',
+          heroImage: '/images/rooms/563273867.jpg',
+
           gallery: [
             'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=85&w=1200&auto=format&fit=crop',
             'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=85&w=1200&auto=format&fit=crop',
@@ -275,8 +273,8 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage:
-            'https://images.unsplash.com/photo-1505693314120-0d443867891c?q=85&w=1600&auto=format&fit=crop',
+          heroImage: '/images/rooms/563273867.jpg',
+
           gallery: [
             'https://images.unsplash.com/photo-1505693314120-0d443867891c?q=85&w=1200&auto=format&fit=crop',
           ],
@@ -872,7 +870,7 @@ export class Units {
     // ──────────────────────────────────────────────────────
     {
       id: 'vila-ines',
-      name: 'Avalena Vila Ines',
+      name: 'Avalena Art Villa Ines',
       taglineHr: 'Bazen · Galerija · 400 m od mora',
       taglineEn: 'Pool · Art gallery · 400 m from the sea',
       descriptionHr:

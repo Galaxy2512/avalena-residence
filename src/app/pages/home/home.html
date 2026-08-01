@@ -1,134 +1,209 @@
 <!-- ═══ HERO ═════════════════════════════════════════════════ -->
 <section class="hero">
   <div class="hero__bg">
-    <img src='/images/home/528894444.jpg' alt="Jadranska obala" class="hero__img" />
+    <img
+      src="/images/rooms/581052507.jpg"
+      alt="Jadranska obala"
+      class="hero__img"
+    />
+
     <div class="hero__overlay"></div>
   </div>
+
   <div class="hero__content">
     <h1 class="hero__title reveal reveal-delay-1">
       <em>Mediteranska oaza u srcu Zadra...</em>
     </h1>
+
     <div class="hero__divider reveal reveal-delay-2"></div>
-    <br>
-    <br>
-    <a routerLink="/" fragment="smjestaj" class="btn btn-outline-light reveal reveal-delay-3">
+
+    <a
+      routerLink="/"
+      fragment="smjestaj"
+      class="btn btn-outline-light reveal reveal-delay-3"
+    >
       {{ 'HOME.CTA_SCROLL' | translate }}
     </a>
   </div>
+
   <div class="hero__scroll">
     <span class="hero__scroll-line"></span>
-
   </div>
 </section>
+
 
 <!-- ═══ INTRO ════════════════════════════════════════════════ -->
 <section class="intro">
   <div class="intro__inner container">
     <div class="intro__left">
-      <span class="eyebrow reveal">{{ 'HOME.ABOUT_EYEBROW' | translate }}</span>
-      <h2 class="intro__title reveal reveal-delay-1">{{ 'HOME.ABOUT_TITLE' | translate }}</h2>
+      <span class="eyebrow reveal">
+        {{ 'HOME.ABOUT_EYEBROW' | translate }}
+      </span>
+
+      <h2 class="intro__title reveal reveal-delay-1">
+        {{ 'HOME.ABOUT_TITLE' | translate }}
+      </h2>
     </div>
+
     <div class="intro__right">
-      <p class="intro__text reveal reveal-delay-2">{{ 'HOME.ABOUT_TEXT' | translate }}</p>
-      <div class="intro__stats reveal reveal-delay-3">
-        <div class="intro__stat">
-          <strong>4</strong>
-          <span>{{ lang.current() === 'hr' ? 'smještajne jedinice' : 'properties' }}</span>
+      <p class="intro__text reveal reveal-delay-2">
+        {{ 'HOME.ABOUT_TEXT' | translate }}
+      </p>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══ LOKACIJA ════════════════════════════════════════════ -->
+<section class="location">
+  <div class="location__content-side">
+    <div class="location__inner">
+      <span class="eyebrow reveal">
+        {{ 'HOME.LOCATION_EYEBROW' | translate }}
+      </span>
+
+      <h2 class="location__title reveal reveal-delay-1">
+        {{ 'HOME.LOCATION_TITLE' | translate }}
+      </h2>
+
+      <p class="location__text reveal reveal-delay-2">
+        {{ 'HOME.LOCATION_TEXT' | translate }}
+      </p>
+
+      <div class="location__facts reveal reveal-delay-2">
+        <div class="location__fact">
+          <strong>
+            {{ 'HOME.FACT_1_VALUE' | translate }}
+          </strong>
+
+          <span>
+            {{ 'HOME.FACT_1_LABEL' | translate }}
+          </span>
         </div>
-        <div class="intro__stat">
-          <strong>300 m</strong>
-          <span>{{ lang.current() === 'hr' ? 'od mora' : 'from the sea' }}</span>
+
+        <div class="location__sep"></div>
+
+        <div class="location__fact">
+          <strong>
+            {{ 'HOME.FACT_2_VALUE' | translate }}
+          </strong>
+
+          <span>
+            {{ 'HOME.FACT_2_LABEL' | translate }}
+          </span>
         </div>
-        <div class="intro__stat">
-          <strong>8.4</strong>
-          <span>{{ lang.current() === 'hr' ? 'prosječna ocjena' : 'avg. rating' }}</span>
+
+        <div class="location__sep"></div>
+
+        <div class="location__fact">
+          <strong>
+            {{ 'HOME.FACT_3_VALUE' | translate }}
+          </strong>
+
+          <span>
+            {{ 'HOME.FACT_3_LABEL' | translate }}
+          </span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<div class="h-rule--gold" style="margin: 0 2rem;"></div>
+
+<div class="h-rule--gold"></div>
+
 
 <!-- ═══ UNITS ════════════════════════════════════════════════ -->
 <section class="units" id="smjestaj">
   <div class="units__header container reveal">
-    <span class="eyebrow">{{ 'HOME.UNITS_EYEBROW' | translate }}</span>
-    <h2 class="units__title">{{ 'HOME.UNITS_TITLE' | translate }}</h2>
+    <span class="eyebrow">
+      {{ 'HOME.UNITS_EYEBROW' | translate }}
+    </span>
+
+    <h2 class="units__title">
+      {{ 'HOME.UNITS_TITLE' | translate }}
+    </h2>
   </div>
 
   @for (unit of units; track unit.id; let i = $index) {
-    <article class="unit-row reveal" [class.unit-row--reverse]="i % 2 === 1">
+    <article
+      class="unit-row reveal"
+      [class.unit-row--reverse]="i % 2 === 1"
+    >
+      <a
+        [routerLink]="['/smjestaj', unit.id]"
+        class="unit-row__img-wrap"
+      >
+        <img
+          [src]="unit.heroImage"
+          [alt]="unit.name"
+          class="unit-row__img"
+        />
 
-      <a [routerLink]="['/smjestaj', unit.id]" class="unit-row__img-wrap">
-        <img [src]="unit.heroImage" [alt]="unit.name" class="unit-row__img" />
         <div class="unit-row__img-overlay"></div>
-        <div class="unit-row__badge">
-          <span class="unit-row__badge-num">0{{ i + 1 }}</span>
-        </div>
       </a>
 
       <div class="unit-row__content">
-        <span class="eyebrow">{{ getTagline(unit) }}</span>
-        <h3 class="unit-row__name">{{ unit.name }}</h3>
-        <p class="unit-row__desc">{{ getDescription(unit) }}</p>
+        <span class="eyebrow">
+          {{ getTagline(unit) }}
+        </span>
+
+        <h3 class="unit-row__name">
+          {{ unit.name }}
+        </h3>
+
+        <p class="unit-row__desc">
+          {{ getDescription(unit) }}
+        </p>
 
         <div class="unit-row__meta">
-          <span>{{ unit.rooms.length }} {{ lang.current() === 'hr' ? 'kategorija' : 'room types' }}</span>
+          <span>
+            {{ unit.rooms.length }}
+            {{ lang.current() === 'hr' ? 'kategorija' : 'room types' }}
+          </span>
         </div>
 
-        <a [routerLink]="['/smjestaj', unit.id]" class="btn btn-outline-navy">
+        <a
+          [routerLink]="['/smjestaj', unit.id]"
+          class="btn btn-outline-navy"
+        >
           {{ 'HOME.EXPLORE' | translate }}
         </a>
       </div>
-
     </article>
   }
 </section>
 
-<!-- ═══ LOKACIJA ════════════════════════════════════════════ -->
-<section class="location">
-  <div class="location__img-side">
-    <img src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=1200&auto=format&fit=crop" alt="Zadar" class="location__img" />
-  </div>
-  <div class="location__content-side">
-    <div class="location__inner">
-      <span class="eyebrow reveal">{{ 'HOME.LOCATION_EYEBROW' | translate }}</span>
-      <h2 class="location__title reveal reveal-delay-1">{{ 'HOME.LOCATION_TITLE' | translate }}</h2>
-      <p class="location__text reveal reveal-delay-2">{{ 'HOME.LOCATION_TEXT' | translate }}</p>
-      <div class="location__facts reveal reveal-delay-2">
-        <div class="location__fact">
-          <strong>{{ 'HOME.FACT_1_VALUE' | translate }}</strong>
-          <span>{{ 'HOME.FACT_1_LABEL' | translate }}</span>
-        </div>
-        <div class="location__sep"></div>
-        <div class="location__fact">
-          <strong>{{ 'HOME.FACT_2_VALUE' | translate }}</strong>
-          <span>{{ 'HOME.FACT_2_LABEL' | translate }}</span>
-        </div>
-        <div class="location__sep"></div>
-        <div class="location__fact">
-          <strong>{{ 'HOME.FACT_3_VALUE' | translate }}</strong>
-          <span>{{ 'HOME.FACT_3_LABEL' | translate }}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- ═══ CTA ══════════════════════════════════════════════════ -->
 <section class="cta-section" id="kontakt">
-  <div class="cta-section__bg">
-    <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=70&w=1920&auto=format&fit=crop" alt="" aria-hidden="true" />
-    <div class="cta-section__overlay"></div>
-  </div>
   <div class="container cta-section__inner">
-    <span class="eyebrow eyebrow--light reveal">{{ 'HOME.BOOK_EYEBROW' | translate }}</span>
-    <h2 class="cta-section__title reveal reveal-delay-1">{{ 'HOME.BOOK_TITLE' | translate }}</h2>
-    <p class="cta-section__sub reveal reveal-delay-2">{{ 'HOME.BOOK_TEXT' | translate }}</p>
+    <span class="eyebrow reveal">
+      {{ 'HOME.BOOK_EYEBROW' | translate }}
+    </span>
+
+    <h2 class="cta-section__title reveal reveal-delay-1">
+      {{ 'HOME.BOOK_TITLE' | translate }}
+    </h2>
+
+    <p class="cta-section__sub reveal reveal-delay-2">
+      {{ 'HOME.BOOK_TEXT' | translate }}
+    </p>
+
     <div class="cta-section__actions reveal reveal-delay-3">
-      <a href="mailto:info&#64;avalena.hr" class="btn btn-gold">{{ 'HOME.BOOK_EMAIL' | translate }}</a>
-      <a href="tel:+385911234567" class="btn btn-outline-light">{{ 'HOME.BOOK_PHONE' | translate }}</a>
+      <a
+        href="mailto:info&#64;avalena.hr"
+        class="btn btn-gold"
+      >
+        {{ 'HOME.BOOK_EMAIL' | translate }}
+      </a>
+
+      <a
+        href="tel:+385911234567"
+        class="btn btn-outline-navy"
+      >
+        {{ 'HOME.BOOK_PHONE' | translate }}
+      </a>
     </div>
   </div>
 </section>

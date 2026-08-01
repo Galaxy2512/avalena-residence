@@ -115,3 +115,90 @@ h1, h2, h3, h4 {
 .h-rule         { height: 1px; background: rgba(26,39,68,.1); }
 .h-rule--gold   { height: 1px; background: linear-gradient(90deg, transparent, var(--c-gold), transparent); opacity: .5; }
 .h-rule--light  { height: 1px; background: rgba(255,255,255,.12); }
+
+
+html {
+  width: 100%;
+  min-width: 320px;
+
+  font-size: 16px;
+  scroll-behavior: smooth;
+
+  overflow-x: hidden;
+}
+
+body {
+  width: 100%;
+  min-width: 320px;
+  margin: 0;
+
+  font-family: var(--f-sans);
+  font-weight: 300;
+  line-height: 1.65;
+
+  color: var(--c-charcoal);
+  background: var(--c-cream);
+
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+app-root {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  width: 100%;
+  flex: 1;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video,
+iframe,
+svg {
+  max-width: 100%;
+}
+
+img,
+picture,
+video {
+  display: block;
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  max-width: 100%;
+  font: inherit;
+}
+
+.container {
+  width: min(100% - 4rem, var(--max-w));
+  margin-inline: auto;
+  padding: 0;
+}
+
+@media (max-width: 900px) {
+  .container {
+    width: min(100% - 3rem, var(--max-w));
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: min(100% - 2rem, var(--max-w));
+  }
+}

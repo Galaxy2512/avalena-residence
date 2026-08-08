@@ -318,6 +318,15 @@
     inset: 0;
     z-index: 100;
 
+    /* Mobilni preglednici mijenjaju vidljivu visinu viewporta kad se
+       adresna traka pojavi/sakrije (npr. Chrome/Safari na Androidu/iOS-u).
+       100vh se u nekim slucajevima racuna prema layout viewportu (koji
+       ukljucuje prostor adresne trake), pa overlay ne pokrije cijeli
+       ekran i ispod se vidi dio stranice. 100dvh prati stvarnu vidljivu
+       visinu, pa je koristimo kao progresivno poboljsanje uz 100vh fallback. */
+    height: 100vh;
+    height: 100dvh;
+
     padding: calc(var(--nav-h) + 2rem) 2rem 3rem;
 
     flex-direction: column;

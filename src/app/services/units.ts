@@ -5,368 +5,6 @@ import { RentalUnit, Room } from './unit.model';
 export class Units {
   private readonly units: RentalUnit[] = [
     // ──────────────────────────────────────────────────────
-    // AVALENA ROOMS
-    // ──────────────────────────────────────────────────────
-    {
-      id: 'rooms',
-      name: 'Avalena Rooms',
-      taglineHr: 'Udobne sobe s balkonom u srcu Borika',
-      taglineEn: 'Comfortable rooms with balconies in the heart of Borik',
-      descriptionHr:
-        'Šest kategorija soba — od kompaktnih dvokrevetnih do prostranijih četverokrevetnih — s drvenim podovima, balkonima i pogledom na grad.',
-      descriptionEn:
-        'Six room categories — from compact doubles to spacious quadruples — featuring hardwood floors, balconies and city views.',
-      longDescriptionHr:
-        'Avalena Rooms nudi raznovrsne smještajne kategorije prilagođene parovima, obiteljima i putnicima koji traže ugodan i funkcionalan boravak u Boriku. Sve sobe opremljene su klimom, ravnim TV ekranom, WiFi-jem, hladnjakom i privatnom kupaonicom. Prijava od 15:00, odjava do 10:00.',
-      longDescriptionEn:
-        'Avalena Rooms offers a variety of room categories suited to couples, families and travellers looking for a comfortable stay in Borik. All rooms feature air conditioning, flat-screen TV, WiFi, a fridge and a private bathroom. Check-in from 15:00, check-out by 10:00.',
-      addressHr: 'Ul. Augusta Šenoe 22, Borik, Zadar',
-      addressEn: 'Ul. Augusta Šenoe 22, Borik, Zadar',
-      heroImage: '/images/rooms/684880052.jpg',
-      gallery: [
-        '/images/rooms/558049770.jpg',
-        '/images/rooms/558689713.jpg',
-        '/images/rooms/563273867.jpg',
-        '/images/rooms/563539042.jpg',
-      ],
-      rooms: [
-        {
-          id: 'dvokrevetna-balkon',
-          name: 'Dvokrevetna soba s bračnim krevetom i balkonom',
-          nameEn: 'Double Room with Balcony',
-          descriptionHr:
-            'Soba od 22 m² s prostorom za sjedenje, TV ravnog ekrana, radnim stolom, balkonom i privatnom kupaonicom. Drveni pod.',
-          descriptionEn:
-            '22 m² room featuring a seating area with flat-screen TV, desk, balcony and private bathroom. Hardwood floor.',
-          guests: 2,
-          sizeM2: 22,
-          hasBalcony: true,
-          beds: [{ type: 'Veliki bračni krevet', count: 1 }],
-          amenities: [
-            'Balkon',
-            'Klima uređaj',
-            'Besplatni WiFi',
-            'TV s ravnim ekranom',
-            'Privatna kupaonica',
-            'Hladnjak',
-            'Radni stol',
-            'Drveni pod',
-            'Grijanje',
-            'Električno kuhalo',
-          ],
-          amenitiesEn: [
-            'Balcony',
-            'Air conditioning',
-            'Free WiFi',
-            'Flat-screen TV',
-            'Private bathroom',
-            'Fridge',
-            'Desk',
-            'Hardwood floor',
-            'Heating',
-            'Electric kettle',
-          ],
-          heroImage: '/images/rooms/558049770.jpg',
-          gallery: [
-            'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=85&w=1200&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1560185007-5f0bb1866cab?q=85&w=1200&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=85&w=1200&auto=format&fit=crop',
-          ],
-        },
-        {
-          id: 'dvokrevetna-budget',
-          name: 'Niskobudžetna dvokrevetna soba s bračnim krevetom',
-          nameEn: 'Budget Double Room',
-          descriptionHr:
-            'Kompaktna soba od 18 m² s prostorom za sjedenje, TV ravnog ekrana, radnim stolom, balkonom i privatnom kupaonicom.',
-          descriptionEn:
-            'Compact 18 m² room with seating area, flat-screen TV, desk, balcony and private bathroom.',
-          guests: 2,
-          sizeM2: 18,
-          hasBalcony: true,
-          beds: [{ type: 'Veliki bračni krevet', count: 1 }],
-          amenities: [
-            'Balkon',
-            'Klima uređaj',
-            'Besplatni WiFi',
-            'TV s ravnim ekranom',
-            'Privatna kupaonica',
-            'Hladnjak',
-            'Radni stol',
-            'Drveni pod',
-            'Grijanje',
-          ],
-          amenitiesEn: [
-            'Balcony',
-            'Air conditioning',
-            'Free WiFi',
-            'Flat-screen TV',
-            'Private bathroom',
-            'Fridge',
-            'Desk',
-            'Hardwood floor',
-            'Heating',
-          ],
-          heroImage: '/images/rooms/558689713.jpg', //treba mjenjati sve
-          gallery: [
-            'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=85&w=1200&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1200&auto=format&fit=crop',
-          ],
-        },
-        {
-          id: 'trokrevetna-balkon',
-          name: 'Trokrevetna soba s balkonom',
-          nameEn: 'Triple Room with Balcony',
-          descriptionHr:
-            'Prostrana soba od 30 m² s balkonom, prostorom za sjedenje, TV ravnog ekrana, radnim stolom i privatnom kupaonicom.',
-          descriptionEn:
-            'Spacious 30 m² room with balcony, seating area, flat-screen TV, desk and private bathroom.',
-          guests: 3,
-          sizeM2: 30,
-          hasBalcony: true,
-          beds: [
-            { type: 'Veliki bračni krevet', count: 1 },
-            { type: 'Krevet za 1 osobu', count: 1 },
-          ],
-          amenities: [
-            'Balkon',
-            'Klima uređaj',
-            'Besplatni WiFi',
-            'TV s ravnim ekranom',
-            'Privatna kupaonica',
-            'Hladnjak',
-            'Radni stol',
-            'Drveni pod',
-            'Grijanje',
-          ],
-          amenitiesEn: [
-            'Balcony',
-            'Air conditioning',
-            'Free WiFi',
-            'Flat-screen TV',
-            'Private bathroom',
-            'Fridge',
-            'Desk',
-            'Hardwood floor',
-            'Heating',
-          ],
-          heroImage: '/images/rooms/563273867.jpg',
-
-          gallery: [
-            'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=85&w=1200&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=85&w=1200&auto=format&fit=crop',
-          ],
-        },
-        {
-          id: 'trokrevetna-economy',
-          name: 'Trokrevetna soba Economy',
-          nameEn: 'Economy Triple Room',
-          descriptionHr:
-            'Soba od 28 m² s prostorom za sjedenje, TV ravnog ekrana i radnim stolom. Bez balkona.',
-          descriptionEn: '28 m² room with seating area, flat-screen TV and desk. No balcony.',
-          guests: 3,
-          sizeM2: 28,
-          hasBalcony: false,
-          beds: [
-            { type: 'Veliki bračni krevet', count: 1 },
-            { type: 'Krevet za 1 osobu', count: 1 },
-          ],
-          amenities: [
-            'Klima uređaj',
-            'Besplatni WiFi',
-            'TV s ravnim ekranom',
-            'Privatna kupaonica',
-            'Hladnjak',
-            'Radni stol',
-            'Drveni pod',
-            'Grijanje',
-          ],
-          amenitiesEn: [
-            'Air conditioning',
-            'Free WiFi',
-            'Flat-screen TV',
-            'Private bathroom',
-            'Fridge',
-            'Desk',
-            'Hardwood floor',
-            'Heating',
-          ],
-          heroImage: '/images/rooms/563273867.jpg',
-
-          gallery: [
-            'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1200&auto=format&fit=crop',
-          ],
-        },
-        {
-          id: 'cetverokretna',
-          name: 'Četverokrevetna soba',
-          nameEn: 'Quadruple Room',
-          descriptionHr:
-            'Prostrana soba od 38 m² s balkonom, prostorom za sjedenje, TV ravnog ekrana i zasebnim klima uređajem.',
-          descriptionEn:
-            'Spacious 38 m² room with balcony, seating area, flat-screen TV and separate air conditioning.',
-          guests: 4,
-          sizeM2: 38,
-          hasBalcony: true,
-          beds: [
-            { type: 'Veliki bračni krevet', count: 1 },
-            { type: 'Krevet za 1 osobu', count: 2 },
-          ],
-          amenities: [
-            'Balkon',
-            'Zasebni klima uređaj',
-            'Besplatni WiFi',
-            'TV s ravnim ekranom',
-            'Privatna kupaonica',
-            'Hladnjak',
-            'Radni stol',
-            'Drveni pod',
-            'Grijanje',
-          ],
-          amenitiesEn: [
-            'Balcony',
-            'Separate air conditioning',
-            'Free WiFi',
-            'Flat-screen TV',
-            'Private bathroom',
-            'Fridge',
-            'Desk',
-            'Hardwood floor',
-            'Heating',
-          ],
-          heroImage: '/images/rooms/563273867.jpg',
-
-          gallery: [
-            'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=85&w=1200&auto=format&fit=crop',
-            'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=85&w=1200&auto=format&fit=crop',
-          ],
-        },
-        {
-          id: 'dvokrevetna-standard',
-          name: 'Dvokrevetna soba s bračnim krevetom',
-          nameEn: 'Standard Double Room',
-          descriptionHr:
-            'Standardna soba od 22 m² s prostorom za sjedenje, TV ravnog ekrana i privatnom kupaonicom. Bez balkona.',
-          descriptionEn:
-            'Standard 22 m² room with seating area, flat-screen TV and private bathroom. No balcony.',
-          guests: 2,
-          sizeM2: 22,
-          hasBalcony: false,
-          beds: [{ type: 'Veliki bračni krevet', count: 1 }],
-          amenities: [
-            'Klima uređaj',
-            'Besplatni WiFi',
-            'TV s ravnim ekranom',
-            'Privatna kupaonica',
-            'Hladnjak',
-            'Radni stol',
-            'Drveni pod',
-            'Grijanje',
-          ],
-          amenitiesEn: [
-            'Air conditioning',
-            'Free WiFi',
-            'Flat-screen TV',
-            'Private bathroom',
-            'Fridge',
-            'Desk',
-            'Hardwood floor',
-            'Heating',
-          ],
-          heroImage: '/images/rooms/563273867.jpg',
-
-          gallery: [
-            'https://images.unsplash.com/photo-1505693314120-0d443867891c?q=85&w=1200&auto=format&fit=crop',
-          ],
-        },
-      ],
-    },
-
-    // ──────────────────────────────────────────────────────
-    // AVALENA PENTHOUSE — s pravim slikama
-    // ──────────────────────────────────────────────────────
-    {
-      id: 'penthouse',
-      name: 'Avalena Penthouse',
-      taglineHr: '200 m² · 5 spavaćih soba · Panoramska terasa',
-      taglineEn: '200 m² · 5 bedrooms · Panoramic terrace',
-      descriptionHr:
-        'Luksuzni apartman na vrhu zgrade s pet spavaćih soba, pet kupaonica i prostranom terasom s pogledom na grad.',
-      descriptionEn:
-        'Luxury top-floor apartment with five bedrooms, five bathrooms and a spacious terrace overlooking the city.',
-      longDescriptionHr:
-        'Avalena Penthouse je prostrani luksuzni apartman od 200 m² smješten na vrhu zgrade s pogledom na grad i panoramskom terasom. Apartman raspolaže s pet spavaćih soba, pet kupaonica, velikom dnevnom sobom s 49" Smart TV-om, potpuno opremljenom kuhinjom (perilica suđa, ploča za kuhanje, mikrovalna), te pralionom rublja. Svi kreveti su dugi > 2 metra. Netflix i streaming servisi dostupni. Gornji katovi — isključivo stepenicama.',
-      longDescriptionEn:
-        'Avalena Penthouse is a 200 m² luxury apartment on the top floor with city views and a panoramic terrace. The apartment features five bedrooms, five bathrooms, a large living room with a 49" Smart TV, a fully equipped kitchen (dishwasher, hob, microwave) and a washing machine. All beds exceed 2 metres. Netflix and streaming services available. Upper floors — stairs only.',
-      addressHr: 'Ul. Augusta Šenoe 22, Borik, Zadar',
-      addressEn: 'Ul. Augusta Šenoe 22, Borik, Zadar',
-      heroImage: '/images/penthouse/terasa.jpg',
-      gallery: [
-        '/images/penthouse/terasa.jpg',
-        '/images/penthouse/dnevni-boravak.jpg',
-        '/images/penthouse/soba1-bracni.jpg',
-        '/images/penthouse/soba5-zlatna.jpg',
-      ],
-      rooms: [
-        {
-          id: 'penthouse-cijeli',
-          name: 'Penthouse apartman — cijeli (200 m²)',
-          nameEn: 'Penthouse Apartment — Entire (200 m²)',
-          descriptionHr:
-            'Cijeli penthouse apartman od 200 m² s pet spavaćih soba, pet kupaonica, dnevnim boravkom, potpuno opremljenom kuhinjom i panoramskom terasom s pogledom na grad.',
-          descriptionEn:
-            'The entire 200 m² penthouse with five bedrooms, five bathrooms, living room, fully equipped kitchen and panoramic city-view terrace.',
-          guests: 10,
-          sizeM2: 200,
-          hasBalcony: true,
-          beds: [
-            { type: 'Veliki bračni krevet', count: 4 },
-            { type: 'Krevet za 1 osobu', count: 1 },
-            { type: 'Sofa-krevet u dnevnom boravku', count: 1 },
-          ],
-          amenities: [
-            'Panoramska terasa',
-            'Pogled na grad',
-            '5 spavaćih soba',
-            '5 kupaonica',
-            'Perilica suđa',
-            'Perilica rublja',
-            'Potpuno opremljena kuhinja',
-            'Klima uređaj',
-            'Besplatni WiFi',
-            'Parking',
-            'Netflix/Streaming',
-            'Kreveti > 2 m',
-          ],
-          amenitiesEn: [
-            'Panoramic terrace',
-            'City view',
-            '5 bedrooms',
-            '5 bathrooms',
-            'Dishwasher',
-            'Washing machine',
-            'Fully equipped kitchen',
-            'Air conditioning',
-            'Free WiFi',
-            'Parking',
-            'Netflix/Streaming',
-            'Beds > 2 m',
-          ],
-          heroImage: '/images/penthouse/terasa.jpg',
-          gallery: [
-            '/images/penthouse/terasa.jpg',
-            '/images/penthouse/dnevni-boravak.jpg',
-            '/images/penthouse/soba1-bracni.jpg',
-            '/images/penthouse/soba2-bracni.jpg',
-            '/images/penthouse/soba3-prozor.jpg',
-            '/images/penthouse/soba4-bracni.jpg',
-            '/images/penthouse/soba5-zlatna.jpg',
-          ],
-        },
-      ],
-    },
-
-    // ──────────────────────────────────────────────────────
     // AVALENA RESIDENCE
     // ──────────────────────────────────────────────────────
     {
@@ -1289,6 +927,368 @@ export class Units {
             '/images/vila-ines/582271891.jpg',
             '/images/vila-ines/582272087.jpg',
             '/images/vila-ines/883427780.jpg',
+          ],
+        },
+      ],
+    },
+
+    // ──────────────────────────────────────────────────────
+    // AVALENA ROOMS
+    // ──────────────────────────────────────────────────────
+    {
+      id: 'rooms',
+      name: 'Avalena Rooms',
+      taglineHr: 'Udobne sobe s balkonom u srcu Borika',
+      taglineEn: 'Comfortable rooms with balconies in the heart of Borik',
+      descriptionHr:
+        'Šest kategorija soba — od kompaktnih dvokrevetnih do prostranijih četverokrevetnih — s drvenim podovima, balkonima i pogledom na grad.',
+      descriptionEn:
+        'Six room categories — from compact doubles to spacious quadruples — featuring hardwood floors, balconies and city views.',
+      longDescriptionHr:
+        'Avalena Rooms nudi raznovrsne smještajne kategorije prilagođene parovima, obiteljima i putnicima koji traže ugodan i funkcionalan boravak u Boriku. Sve sobe opremljene su klimom, ravnim TV ekranom, WiFi-jem, hladnjakom i privatnom kupaonicom. Prijava od 15:00, odjava do 10:00.',
+      longDescriptionEn:
+        'Avalena Rooms offers a variety of room categories suited to couples, families and travellers looking for a comfortable stay in Borik. All rooms feature air conditioning, flat-screen TV, WiFi, a fridge and a private bathroom. Check-in from 15:00, check-out by 10:00.',
+      addressHr: 'Ul. Augusta Šenoe 22, Borik, Zadar',
+      addressEn: 'Ul. Augusta Šenoe 22, Borik, Zadar',
+      heroImage: '/images/rooms/684880052.jpg',
+      gallery: [
+        '/images/rooms/558049770.jpg',
+        '/images/rooms/558689713.jpg',
+        '/images/rooms/563273867.jpg',
+        '/images/rooms/563539042.jpg',
+      ],
+      rooms: [
+        {
+          id: 'dvokrevetna-balkon',
+          name: 'Dvokrevetna soba s bračnim krevetom i balkonom',
+          nameEn: 'Double Room with Balcony',
+          descriptionHr:
+            'Soba od 22 m² s prostorom za sjedenje, TV ravnog ekrana, radnim stolom, balkonom i privatnom kupaonicom. Drveni pod.',
+          descriptionEn:
+            '22 m² room featuring a seating area with flat-screen TV, desk, balcony and private bathroom. Hardwood floor.',
+          guests: 2,
+          sizeM2: 22,
+          hasBalcony: true,
+          beds: [{ type: 'Veliki bračni krevet', count: 1 }],
+          amenities: [
+            'Balkon',
+            'Klima uređaj',
+            'Besplatni WiFi',
+            'TV s ravnim ekranom',
+            'Privatna kupaonica',
+            'Hladnjak',
+            'Radni stol',
+            'Drveni pod',
+            'Grijanje',
+            'Električno kuhalo',
+          ],
+          amenitiesEn: [
+            'Balcony',
+            'Air conditioning',
+            'Free WiFi',
+            'Flat-screen TV',
+            'Private bathroom',
+            'Fridge',
+            'Desk',
+            'Hardwood floor',
+            'Heating',
+            'Electric kettle',
+          ],
+          heroImage: '/images/rooms/558049770.jpg',
+          gallery: [
+            'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=85&w=1200&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1560185007-5f0bb1866cab?q=85&w=1200&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=85&w=1200&auto=format&fit=crop',
+          ],
+        },
+        {
+          id: 'dvokrevetna-budget',
+          name: 'Niskobudžetna dvokrevetna soba s bračnim krevetom',
+          nameEn: 'Budget Double Room',
+          descriptionHr:
+            'Kompaktna soba od 18 m² s prostorom za sjedenje, TV ravnog ekrana, radnim stolom, balkonom i privatnom kupaonicom.',
+          descriptionEn:
+            'Compact 18 m² room with seating area, flat-screen TV, desk, balcony and private bathroom.',
+          guests: 2,
+          sizeM2: 18,
+          hasBalcony: true,
+          beds: [{ type: 'Veliki bračni krevet', count: 1 }],
+          amenities: [
+            'Balkon',
+            'Klima uređaj',
+            'Besplatni WiFi',
+            'TV s ravnim ekranom',
+            'Privatna kupaonica',
+            'Hladnjak',
+            'Radni stol',
+            'Drveni pod',
+            'Grijanje',
+          ],
+          amenitiesEn: [
+            'Balcony',
+            'Air conditioning',
+            'Free WiFi',
+            'Flat-screen TV',
+            'Private bathroom',
+            'Fridge',
+            'Desk',
+            'Hardwood floor',
+            'Heating',
+          ],
+          heroImage: '/images/rooms/558689713.jpg', //treba mjenjati sve
+          gallery: [
+            'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=85&w=1200&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1200&auto=format&fit=crop',
+          ],
+        },
+        {
+          id: 'trokrevetna-balkon',
+          name: 'Trokrevetna soba s balkonom',
+          nameEn: 'Triple Room with Balcony',
+          descriptionHr:
+            'Prostrana soba od 30 m² s balkonom, prostorom za sjedenje, TV ravnog ekrana, radnim stolom i privatnom kupaonicom.',
+          descriptionEn:
+            'Spacious 30 m² room with balcony, seating area, flat-screen TV, desk and private bathroom.',
+          guests: 3,
+          sizeM2: 30,
+          hasBalcony: true,
+          beds: [
+            { type: 'Veliki bračni krevet', count: 1 },
+            { type: 'Krevet za 1 osobu', count: 1 },
+          ],
+          amenities: [
+            'Balkon',
+            'Klima uređaj',
+            'Besplatni WiFi',
+            'TV s ravnim ekranom',
+            'Privatna kupaonica',
+            'Hladnjak',
+            'Radni stol',
+            'Drveni pod',
+            'Grijanje',
+          ],
+          amenitiesEn: [
+            'Balcony',
+            'Air conditioning',
+            'Free WiFi',
+            'Flat-screen TV',
+            'Private bathroom',
+            'Fridge',
+            'Desk',
+            'Hardwood floor',
+            'Heating',
+          ],
+          heroImage: '/images/rooms/563273867.jpg',
+
+          gallery: [
+            'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=85&w=1200&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=85&w=1200&auto=format&fit=crop',
+          ],
+        },
+        {
+          id: 'trokrevetna-economy',
+          name: 'Trokrevetna soba Economy',
+          nameEn: 'Economy Triple Room',
+          descriptionHr:
+            'Soba od 28 m² s prostorom za sjedenje, TV ravnog ekrana i radnim stolom. Bez balkona.',
+          descriptionEn: '28 m² room with seating area, flat-screen TV and desk. No balcony.',
+          guests: 3,
+          sizeM2: 28,
+          hasBalcony: false,
+          beds: [
+            { type: 'Veliki bračni krevet', count: 1 },
+            { type: 'Krevet za 1 osobu', count: 1 },
+          ],
+          amenities: [
+            'Klima uređaj',
+            'Besplatni WiFi',
+            'TV s ravnim ekranom',
+            'Privatna kupaonica',
+            'Hladnjak',
+            'Radni stol',
+            'Drveni pod',
+            'Grijanje',
+          ],
+          amenitiesEn: [
+            'Air conditioning',
+            'Free WiFi',
+            'Flat-screen TV',
+            'Private bathroom',
+            'Fridge',
+            'Desk',
+            'Hardwood floor',
+            'Heating',
+          ],
+          heroImage: '/images/rooms/563273867.jpg',
+
+          gallery: [
+            'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1200&auto=format&fit=crop',
+          ],
+        },
+        {
+          id: 'cetverokretna',
+          name: 'Četverokrevetna soba',
+          nameEn: 'Quadruple Room',
+          descriptionHr:
+            'Prostrana soba od 38 m² s balkonom, prostorom za sjedenje, TV ravnog ekrana i zasebnim klima uređajem.',
+          descriptionEn:
+            'Spacious 38 m² room with balcony, seating area, flat-screen TV and separate air conditioning.',
+          guests: 4,
+          sizeM2: 38,
+          hasBalcony: true,
+          beds: [
+            { type: 'Veliki bračni krevet', count: 1 },
+            { type: 'Krevet za 1 osobu', count: 2 },
+          ],
+          amenities: [
+            'Balkon',
+            'Zasebni klima uređaj',
+            'Besplatni WiFi',
+            'TV s ravnim ekranom',
+            'Privatna kupaonica',
+            'Hladnjak',
+            'Radni stol',
+            'Drveni pod',
+            'Grijanje',
+          ],
+          amenitiesEn: [
+            'Balcony',
+            'Separate air conditioning',
+            'Free WiFi',
+            'Flat-screen TV',
+            'Private bathroom',
+            'Fridge',
+            'Desk',
+            'Hardwood floor',
+            'Heating',
+          ],
+          heroImage: '/images/rooms/563273867.jpg',
+
+          gallery: [
+            'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=85&w=1200&auto=format&fit=crop',
+            'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=85&w=1200&auto=format&fit=crop',
+          ],
+        },
+        {
+          id: 'dvokrevetna-standard',
+          name: 'Dvokrevetna soba s bračnim krevetom',
+          nameEn: 'Standard Double Room',
+          descriptionHr:
+            'Standardna soba od 22 m² s prostorom za sjedenje, TV ravnog ekrana i privatnom kupaonicom. Bez balkona.',
+          descriptionEn:
+            'Standard 22 m² room with seating area, flat-screen TV and private bathroom. No balcony.',
+          guests: 2,
+          sizeM2: 22,
+          hasBalcony: false,
+          beds: [{ type: 'Veliki bračni krevet', count: 1 }],
+          amenities: [
+            'Klima uređaj',
+            'Besplatni WiFi',
+            'TV s ravnim ekranom',
+            'Privatna kupaonica',
+            'Hladnjak',
+            'Radni stol',
+            'Drveni pod',
+            'Grijanje',
+          ],
+          amenitiesEn: [
+            'Air conditioning',
+            'Free WiFi',
+            'Flat-screen TV',
+            'Private bathroom',
+            'Fridge',
+            'Desk',
+            'Hardwood floor',
+            'Heating',
+          ],
+          heroImage: '/images/rooms/563273867.jpg',
+
+          gallery: [
+            'https://images.unsplash.com/photo-1505693314120-0d443867891c?q=85&w=1200&auto=format&fit=crop',
+          ],
+        },
+      ],
+    },
+
+    // ──────────────────────────────────────────────────────
+    // AVALENA PENTHOUSE — s pravim slikama
+    // ──────────────────────────────────────────────────────
+    {
+      id: 'penthouse',
+      name: 'Avalena Penthouse',
+      taglineHr: '200 m² · 5 spavaćih soba · Panoramska terasa',
+      taglineEn: '200 m² · 5 bedrooms · Panoramic terrace',
+      descriptionHr:
+        'Luksuzni apartman na vrhu zgrade s pet spavaćih soba, pet kupaonica i prostranom terasom s pogledom na grad.',
+      descriptionEn:
+        'Luxury top-floor apartment with five bedrooms, five bathrooms and a spacious terrace overlooking the city.',
+      longDescriptionHr:
+        'Avalena Penthouse je prostrani luksuzni apartman od 200 m² smješten na vrhu zgrade s pogledom na grad i panoramskom terasom. Apartman raspolaže s pet spavaćih soba, pet kupaonica, velikom dnevnom sobom s 49" Smart TV-om, potpuno opremljenom kuhinjom (perilica suđa, ploča za kuhanje, mikrovalna), te pralionom rublja. Svi kreveti su dugi > 2 metra. Netflix i streaming servisi dostupni. Gornji katovi — isključivo stepenicama.',
+      longDescriptionEn:
+        'Avalena Penthouse is a 200 m² luxury apartment on the top floor with city views and a panoramic terrace. The apartment features five bedrooms, five bathrooms, a large living room with a 49" Smart TV, a fully equipped kitchen (dishwasher, hob, microwave) and a washing machine. All beds exceed 2 metres. Netflix and streaming services available. Upper floors — stairs only.',
+      addressHr: 'Ul. Augusta Šenoe 22, Borik, Zadar',
+      addressEn: 'Ul. Augusta Šenoe 22, Borik, Zadar',
+      heroImage: '/images/penthouse/terasa.jpg',
+      gallery: [
+        '/images/penthouse/terasa.jpg',
+        '/images/penthouse/dnevni-boravak.jpg',
+        '/images/penthouse/soba1-bracni.jpg',
+        '/images/penthouse/soba5-zlatna.jpg',
+      ],
+      rooms: [
+        {
+          id: 'penthouse-cijeli',
+          name: 'Penthouse apartman — cijeli (200 m²)',
+          nameEn: 'Penthouse Apartment — Entire (200 m²)',
+          descriptionHr:
+            'Cijeli penthouse apartman od 200 m² s pet spavaćih soba, pet kupaonica, dnevnim boravkom, potpuno opremljenom kuhinjom i panoramskom terasom s pogledom na grad.',
+          descriptionEn:
+            'The entire 200 m² penthouse with five bedrooms, five bathrooms, living room, fully equipped kitchen and panoramic city-view terrace.',
+          guests: 10,
+          sizeM2: 200,
+          hasBalcony: true,
+          beds: [
+            { type: 'Veliki bračni krevet', count: 4 },
+            { type: 'Krevet za 1 osobu', count: 1 },
+            { type: 'Sofa-krevet u dnevnom boravku', count: 1 },
+          ],
+          amenities: [
+            'Panoramska terasa',
+            'Pogled na grad',
+            '5 spavaćih soba',
+            '5 kupaonica',
+            'Perilica suđa',
+            'Perilica rublja',
+            'Potpuno opremljena kuhinja',
+            'Klima uređaj',
+            'Besplatni WiFi',
+            'Parking',
+            'Netflix/Streaming',
+            'Kreveti > 2 m',
+          ],
+          amenitiesEn: [
+            'Panoramic terrace',
+            'City view',
+            '5 bedrooms',
+            '5 bathrooms',
+            'Dishwasher',
+            'Washing machine',
+            'Fully equipped kitchen',
+            'Air conditioning',
+            'Free WiFi',
+            'Parking',
+            'Netflix/Streaming',
+            'Beds > 2 m',
+          ],
+          heroImage: '/images/penthouse/terasa.jpg',
+          gallery: [
+            '/images/penthouse/terasa.jpg',
+            '/images/penthouse/dnevni-boravak.jpg',
+            '/images/penthouse/soba1-bracni.jpg',
+            '/images/penthouse/soba2-bracni.jpg',
+            '/images/penthouse/soba3-prozor.jpg',
+            '/images/penthouse/soba4-bracni.jpg',
+            '/images/penthouse/soba5-zlatna.jpg',
           ],
         },
       ],

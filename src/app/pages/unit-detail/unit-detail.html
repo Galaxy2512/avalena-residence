@@ -10,28 +10,31 @@
     </div>
   </section>
 
-  <div class="container">
-    <nav class="unit-breadcrumb">
+  <div class="unit-breadcrumb">
+    <nav class="container">
       <a routerLink="/">{{ 'BREADCRUMB.HOME' | translate }}</a>
       <span>/</span>
       <span class="is-current">{{ unit()!.name }}</span>
     </nav>
   </div>
 
-  <section class="unit-about container">
-    <div>
-      <span class="eyebrow">{{ 'UNIT.AMENITIES_TITLE' | translate }}</span>
-      <h2>{{ unit()!.name }}</h2>
-      <p>{{ desc(unit()!) }}</p>
+  <section class="unit-about">
+    <div class="container unit-about__grid">
+      <div>
+        <span class="eyebrow">{{ 'UNIT.AMENITIES_TITLE' | translate }}</span>
+        <h2>{{ unit()!.name }}</h2>
+        <p>{{ desc(unit()!) }}</p>
+      </div>
     </div>
-
   </section>
 
   <!-- SOBE -->
-  <section class="rooms container">
-    <div class="rooms__header">
-      <span class="eyebrow">{{ 'UNIT.ROOMS_EYEBROW' | translate }}</span>
-      <h2>{{ 'UNIT.ROOMS_TITLE' | translate }}</h2>
+  <section class="rooms">
+    <div class="container">
+      <div class="rooms__header">
+        <span class="eyebrow">{{ 'UNIT.ROOMS_EYEBROW' | translate }}</span>
+        <h2>{{ 'UNIT.ROOMS_TITLE' | translate }}</h2>
+      </div>
     </div>
 
     @for (room of unit()!.rooms; track room.id; let i = $index) {
@@ -79,16 +82,18 @@
   </section>
 
   <!-- GALERIJA -->
-  <section class="unit-gallery container">
-    <span class="eyebrow">{{ 'UNIT.GALLERY_EYEBROW' | translate }}</span>
-    <h2>{{ 'UNIT.GALLERY_TITLE' | translate }}</h2>
-    <div class="gallery-main"><img [src]="activeImage()" [alt]="unit()!.name" /></div>
-    <div class="gallery-thumbs">
-      @for (img of unit()!.gallery; track img) {
-        <button type="button" class="gallery-thumb" [class.is-active]="img === activeImage()" (click)="selectImage(img)">
-          <img [src]="img" [alt]="unit()!.name" />
-        </button>
-      }
+  <section class="unit-gallery">
+    <div class="container">
+      <span class="eyebrow">{{ 'UNIT.GALLERY_EYEBROW' | translate }}</span>
+      <h2>{{ 'UNIT.GALLERY_TITLE' | translate }}</h2>
+      <div class="gallery-main"><img [src]="activeImage()" [alt]="unit()!.name" /></div>
+      <div class="gallery-thumbs">
+        @for (img of unit()!.gallery; track img) {
+          <button type="button" class="gallery-thumb" [class.is-active]="img === activeImage()" (click)="selectImage(img)">
+            <img [src]="img" [alt]="unit()!.name" />
+          </button>
+        }
+      </div>
     </div>
   </section>
 

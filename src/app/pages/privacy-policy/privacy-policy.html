@@ -1,0 +1,258 @@
+<article class="legal-page">
+
+  <section class="legal-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow--navy">Avalena</span>
+      <h1>{{ 'LEGAL.PRIVACY_POLICY' | translate }}</h1>
+    </div>
+  </section>
+
+  <div class="legal-breadcrumb">
+    <nav class="container">
+      <a routerLink="/">{{ 'BREADCRUMB.HOME' | translate }}</a>
+      <span>/</span>
+      <span class="is-current">{{ 'BREADCRUMB.PRIVACY' | translate }}</span>
+    </nav>
+  </div>
+
+  <section class="legal-content">
+    <div class="container">
+
+      @if (lang.current() === 'hr') {
+
+        <p class="legal-updated">Zadnje ažurirano: {{ lastUpdated }}</p>
+
+        <p>
+          Ova Politika privatnosti objašnjava koje osobne podatke prikupljamo kada posjetite
+          ovu stranicu ili nas kontaktirate, u koje svrhe ih koristimo te koja prava imate u
+          skladu s Općom uredbom o zaštiti podataka (GDPR).
+        </p>
+
+        <h2>1. Voditelj obrade podataka</h2>
+        <p>
+          Voditelj obrade podataka je Avalena, Ul. Augusta Šenoe 22, Borik, Zadar (OIB: <em>[unijeti OIB nositelja obrta/tvrtke]</em>).
+          Za sva pitanja vezana uz privatnost i osobne podatke možete nas kontaktirati putem
+          e-maila <a href="mailto:info&#64;avalena.hr">info&#64;avalena.hr</a> ili telefona
+          <a href="tel:+385914747453">+385 91 474 7435</a>.
+        </p>
+
+        <h2>2. Koje podatke prikupljamo</h2>
+        <p>Ova stranica ne sadrži obrazac koji automatski prikuplja osobne podatke. Podatke o vama obrađujemo isključivo u sljedećim slučajevima:</p>
+        <ul>
+          <li>
+            <strong>Upiti za rezervaciju i kontakt</strong> — kada nam se obratite putem e-maila
+            ili telefona, obrađujemo podatke koje nam sami dostavite (npr. ime, e-mail adresa,
+            broj telefona, sadržaj upita, željeni termini boravka).
+          </li>
+          <li>
+            <strong>Tehnički podaci u pregledniku</strong> — stranica lokalno u vašem pregledniku
+            (tzv. local storage, ne klasični kolačić) pohranjuje odabrani jezik prikaza i vaš
+            odabir postavki privatnosti/kolačića. Ti se podaci ne šalju na naše poslužitelje.
+            Više informacija potražite u našoj
+            <a routerLink="/politika-kolacica">Politici kolačića</a>.
+          </li>
+          <li>
+            <strong>Podaci koje bilježi hosting pružatelj</strong> — poput svake internetske
+            stranice, poslužitelj i CDN mreža na kojoj se stranica nalazi mogu u standardnim
+            zapisnicima (log datotekama) bilježiti IP adresu, vrstu preglednika i vrijeme
+            pristupa, u svrhu sigurnosti i tehničkog održavanja.
+          </li>
+        </ul>
+
+        <h2>3. Svrha i pravna osnova obrade</h2>
+        <p>Vaše podatke obrađujemo na temelju sljedećih pravnih osnova:</p>
+        <ul>
+          <li><strong>Izvršavanje predugovornih radnji / vaš zahtjev</strong> — kada nam pošaljete upit za rezervaciju, obrađujemo podatke kako bismo vam odgovorili i pripremili ponudu.</li>
+          <li><strong>Legitimni interes</strong> — za osiguravanje sigurnog i ispravnog rada stranice (tehnički zapisnici, nužna lokalna pohrana).</li>
+          <li><strong>Privola</strong> — za funkcije koje nisu nužne za rad stranice (npr. eventualna buduća analitika posjećenosti), koju možete dati ili povući u svakom trenutku putem postavki kolačića.</li>
+        </ul>
+
+        <h2>4. Kolačići i slične tehnologije</h2>
+        <p>
+          Detaljan popis podataka koje pohranjujemo u vašem pregledniku, njihovu svrhu i trajanje
+          te način upravljanja postavkama pronaći ćete u našoj
+          <a routerLink="/politika-kolacica">Politici kolačića</a>.
+        </p>
+
+        <h2>5. Razdoblje čuvanja podataka</h2>
+        <p>
+          Podatke iz upita za rezervaciju čuvamo onoliko dugo koliko je potrebno za obradu vašeg
+          upita i eventualnu komunikaciju vezanu uz boravak, a najdulje 2 godine od posljednjeg
+          kontakta, osim ako zakon (npr. porezni propisi) ne zahtijeva dulje razdoblje čuvanja.
+          Postavke privatnosti pohranjene u pregledniku vrijede dok ih sami ne izbrišete ili
+          promijenite.
+        </p>
+
+        <h2>6. Primatelji podataka</h2>
+        <p>
+          Vaše podatke ne prodajemo niti ustupamo trećim stranama u marketinške svrhe. Podacima
+          mogu pristupiti isključivo pružatelji usluga koje koristimo za rad stranice i poslovanje
+          (npr. pružatelj e-mail usluge i hosting/CDN pružatelj), a koji podatke obrađuju isključivo
+          po našim uputama i u skladu s primjenjivim propisima o zaštiti podataka.
+        </p>
+
+        <h2>7. Prijenos podataka izvan EU/EGP-a</h2>
+        <p>
+          Trenutno ne provodimo namjerni prijenos osobnih podataka izvan Europske unije/Europskog
+          gospodarskog prostora. Ako se to promijeni (npr. uvođenjem novog vanjskog servisa), ova
+          Politika privatnosti bit će ažurirana s odgovarajućim informacijama o zaštitnim mjerama.
+        </p>
+
+        <h2>8. Vaša prava</h2>
+        <p>U skladu s GDPR-om, u odnosu na svoje osobne podatke imate pravo na:</p>
+        <ul>
+          <li>pristup podacima koje o vama obrađujemo,</li>
+          <li>ispravak netočnih ili nepotpunih podataka,</li>
+          <li>brisanje podataka ("pravo na zaborav"),</li>
+          <li>ograničenje obrade,</li>
+          <li>prenosivost podataka,</li>
+          <li>prigovor na obradu temeljenu na legitimnom interesu,</li>
+          <li>povlačenje privole u bilo kojem trenutku, bez utjecaja na zakonitost obrade prije povlačenja.</li>
+        </ul>
+        <p>
+          Zahtjev za ostvarivanje bilo kojeg od navedenih prava možete uputiti na
+          <a href="mailto:info&#64;avalena.hr">info&#64;avalena.hr</a>. Ako smatrate da obrada vaših
+          podataka nije u skladu s propisima, imate pravo podnijeti pritužbu Agenciji za zaštitu
+          osobnih podataka (AZOP), Selska cesta 136, Zagreb, <a href="https://azop.hr" target="_blank" rel="noopener">azop.hr</a>.
+        </p>
+
+        <h2>9. Sigurnost podataka</h2>
+        <p>
+          Poduzimamo razumne tehničke i organizacijske mjere kako bismo zaštitili podatke koje
+          obrađujemo od neovlaštenog pristupa, gubitka ili zlouporabe.
+        </p>
+
+        <h2>10. Maloljetnici</h2>
+        <p>
+          Ova stranica nije namijenjena osobama mlađima od 18 godina i ne prikupljamo svjesno
+          podatke djece.
+        </p>
+
+        <h2>11. Izmjene ove politike</h2>
+        <p>
+          Ovu Politiku privatnosti povremeno možemo ažurirati, primjerice zbog promjena u
+          zakonodavstvu ili funkcionalnostima stranice. Datum posljednje izmjene naveden je na
+          vrhu ove stranice.
+        </p>
+
+      } @else {
+
+        <p class="legal-updated">Last updated: {{ lastUpdated }}</p>
+
+        <p>
+          This Privacy Policy explains what personal data we collect when you visit this website
+          or contact us, why we use it, and what rights you have under the General Data
+          Protection Regulation (GDPR).
+        </p>
+
+        <h2>1. Data controller</h2>
+        <p>
+          The data controller is Avalena, Ul. Augusta Šenoe 22, Borik, Zadar, Croatia
+          (Tax ID: <em>[company tax ID to be added]</em>). For any privacy-related questions,
+          contact us at <a href="mailto:info&#64;avalena.hr">info&#64;avalena.hr</a> or
+          <a href="tel:+385914747453">+385 91 474 7435</a>.
+        </p>
+
+        <h2>2. What data we collect</h2>
+        <p>This site does not include a form that automatically collects personal data. We process your data only in the following cases:</p>
+        <ul>
+          <li>
+            <strong>Booking and contact enquiries</strong> — when you contact us by email or
+            phone, we process the information you provide (e.g. name, email address, phone
+            number, message content, requested dates).
+          </li>
+          <li>
+            <strong>Technical data in your browser</strong> — the site stores your chosen display
+            language and your cookie/privacy preferences locally in your browser (local storage,
+            not a classic cookie). This data is never sent to our servers. See our
+            <a routerLink="/politika-kolacica">Cookie Policy</a> for details.
+          </li>
+          <li>
+            <strong>Data logged by our hosting provider</strong> — like any website, the server
+            and CDN hosting this site may record standard technical logs (IP address, browser
+            type, access time) for security and maintenance purposes.
+          </li>
+        </ul>
+
+        <h2>3. Purpose and legal basis</h2>
+        <p>We process your data on the basis of:</p>
+        <ul>
+          <li><strong>Pre-contractual steps / your request</strong> — when you send a booking enquiry, we process your data in order to respond and prepare an offer.</li>
+          <li><strong>Legitimate interest</strong> — to keep the website secure and functioning correctly (technical logs, essential local storage).</li>
+          <li><strong>Consent</strong> — for anything not strictly necessary for the site to work (e.g. any future analytics), which you can give or withdraw at any time via the cookie settings.</li>
+        </ul>
+
+        <h2>4. Cookies and similar technologies</h2>
+        <p>
+          For a detailed list of what we store in your browser, why, for how long, and how to
+          manage your preferences, see our <a routerLink="/politika-kolacica">Cookie Policy</a>.
+        </p>
+
+        <h2>5. Data retention</h2>
+        <p>
+          We keep data from booking enquiries for as long as needed to handle your enquiry and
+          any related communication about your stay, and no longer than 2 years from the last
+          contact, unless a longer period is required by law (e.g. tax regulations). Privacy
+          preferences stored in your browser remain until you delete or change them yourself.
+        </p>
+
+        <h2>6. Recipients of data</h2>
+        <p>
+          We do not sell or share your data with third parties for marketing purposes. Data may
+          only be accessed by service providers we use to run the site and our business (e.g. our
+          email provider and hosting/CDN provider), who process it strictly on our instructions
+          and in line with applicable data protection law.
+        </p>
+
+        <h2>7. Transfers outside the EU/EEA</h2>
+        <p>
+          We do not currently carry out any intentional transfer of personal data outside the
+          European Union/European Economic Area. Should this change (e.g. through a new
+          third-party service), this Privacy Policy will be updated with the relevant safeguards.
+        </p>
+
+        <h2>8. Your rights</h2>
+        <p>Under the GDPR, you have the right to:</p>
+        <ul>
+          <li>access the data we hold about you,</li>
+          <li>rectify inaccurate or incomplete data,</li>
+          <li>request erasure ("right to be forgotten"),</li>
+          <li>restrict processing,</li>
+          <li>data portability,</li>
+          <li>object to processing based on legitimate interest,</li>
+          <li>withdraw consent at any time, without affecting the lawfulness of processing before withdrawal.</li>
+        </ul>
+        <p>
+          To exercise any of these rights, contact us at
+          <a href="mailto:info&#64;avalena.hr">info&#64;avalena.hr</a>. If you believe our processing
+          of your data does not comply with the law, you have the right to lodge a complaint with
+          the Croatian Data Protection Agency (AZOP), Selska cesta 136, Zagreb —
+          <a href="https://azop.hr" target="_blank" rel="noopener">azop.hr</a> — or with your local
+          supervisory authority.
+        </p>
+
+        <h2>9. Data security</h2>
+        <p>
+          We take reasonable technical and organisational measures to protect the data we process
+          against unauthorised access, loss or misuse.
+        </p>
+
+        <h2>10. Minors</h2>
+        <p>
+          This website is not intended for individuals under 18 years of age, and we do not
+          knowingly collect data from children.
+        </p>
+
+        <h2>11. Changes to this policy</h2>
+        <p>
+          We may update this Privacy Policy from time to time, for example due to legal changes
+          or new site functionality. The date of the latest update is shown at the top of this
+          page.
+        </p>
+
+      }
+
+    </div>
+  </section>
+
+</article>

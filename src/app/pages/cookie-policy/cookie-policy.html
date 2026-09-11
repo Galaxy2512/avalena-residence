@@ -1,0 +1,185 @@
+<article class="legal-page">
+
+  <section class="legal-hero">
+    <div class="container">
+      <span class="eyebrow eyebrow--navy">Avalena</span>
+      <h1>{{ 'LEGAL.COOKIE_POLICY' | translate }}</h1>
+    </div>
+  </section>
+
+  <div class="legal-breadcrumb">
+    <nav class="container">
+      <a routerLink="/">{{ 'BREADCRUMB.HOME' | translate }}</a>
+      <span>/</span>
+      <span class="is-current">{{ 'BREADCRUMB.COOKIES' | translate }}</span>
+    </nav>
+  </div>
+
+  <section class="legal-content">
+    <div class="container">
+
+      @if (lang.current() === 'hr') {
+
+        <p class="legal-updated">Zadnje ažurirano: {{ lastUpdated }}</p>
+
+        <p>
+          Ova Politika kolačića objašnjava koje podatke pohranjujemo u vašem pregledniku kada
+          posjetite ovu stranicu, u koju svrhu, koliko dugo, te kako možete upravljati svojim
+          postavkama.
+        </p>
+
+        <h2>1. Što su kolačići i slična tehnologija pohrane</h2>
+        <p>
+          Kolačići su male tekstualne datoteke koje se pohranjuju u vašem pregledniku. Ova
+          stranica ne koristi klasične kolačiće za praćenje, već koristi <em>local storage</em>
+          preglednika — sličnu tehnologiju koja podatke čuva isključivo lokalno na vašem uređaju,
+          bez slanja na naše poslužitelje.
+        </p>
+
+        <h2>2. Podaci koje trenutno pohranjujemo</h2>
+        <table class="legal-table">
+          <thead>
+            <tr>
+              <th>Naziv</th>
+              <th>Svrha</th>
+              <th>Vrsta</th>
+              <th>Trajanje</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>avalena_lang</code></td>
+              <td>Pamti odabrani jezik prikaza stranice (HR/EN).</td>
+              <td>Nužno · local storage</td>
+              <td>Do ručnog brisanja</td>
+            </tr>
+            <tr>
+              <td><code>avalena_cookie_consent</code></td>
+              <td>Pamti vaš odabir u postavkama privatnosti/kolačića.</td>
+              <td>Nužno · local storage</td>
+              <td>Do ručnog brisanja</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>3. Analitički i marketinški kolačići</h2>
+        <p>
+          U postavkama privatnosti nudimo mogućnost davanja privole za kategorije "analitički" i
+          "marketinški" kolačići. Ove kategorije trenutno nisu aktivne — stranica ne koristi
+          alate za analitiku posjećenosti niti marketinško praćenje. Ako u budućnosti uvedemo
+          takve alate (npr. za razumijevanje posjećenosti stranice), oni će se aktivirati
+          isključivo za korisnike koji daju svoju privolu, a ova Politika kolačića bit će
+          ažurirana s detaljima o novim kolačićima.
+        </p>
+
+        <h2>4. Vanjski resursi (fontovi i ikone)</h2>
+        <p>
+          Radi ispravnog prikaza stranice učitavamo Google fontove (Cormorant Garamond, Jost) i
+          Font Awesome ikone s vanjske CDN mreže (fonts.googleapis.com, fonts.gstatic.com,
+          cdnjs.cloudflare.com). Prilikom učitavanja ovih resursa vaš preglednik uspostavlja vezu
+          s tim poslužiteljima, koji mogu tehnički zabilježiti vašu IP adresu, neovisno o vašim
+          postavkama kolačića na ovoj stranici. Ovi resursi su nužni za ispravan vizualni prikaz
+          stranice.
+        </p>
+
+        <h2>5. Upravljanje postavkama kolačića</h2>
+        <p>
+          Svoj odabir možete promijeniti u bilo kojem trenutku klikom na gumb ispod, ili putem
+          poveznice "Postavke kolačića" u podnožju stranice.
+        </p>
+        <button type="button" class="btn btn-outline-navy legal-cta" (click)="consent.openPreferences()">
+          Otvori postavke kolačića
+        </button>
+
+        <h2>6. Vaš pristanak</h2>
+        <p>
+          Nužna lokalna pohrana ne zahtijeva vaš pristanak jer je neophodna za rad stranice.
+          Za sve ostale kategorije tražimo vašu izričitu privolu prije aktivacije, a privolu
+          možete povući u svakom trenutku putem postavki kolačića. Više o obradi osobnih podataka
+          pročitajte u našoj <a routerLink="/politika-privatnosti">Politici privatnosti</a>.
+        </p>
+
+      } @else {
+
+        <p class="legal-updated">Last updated: {{ lastUpdated }}</p>
+
+        <p>
+          This Cookie Policy explains what data we store in your browser when you visit this
+          site, why, for how long, and how you can manage your preferences.
+        </p>
+
+        <h2>1. What cookies and similar storage are</h2>
+        <p>
+          Cookies are small text files stored in your browser. This site does not use classic
+          tracking cookies — instead it uses browser <em>local storage</em>, a similar technology
+          that keeps data strictly on your device, without sending it to our servers.
+        </p>
+
+        <h2>2. Data we currently store</h2>
+        <table class="legal-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Purpose</th>
+              <th>Type</th>
+              <th>Duration</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><code>avalena_lang</code></td>
+              <td>Remembers your chosen display language (HR/EN).</td>
+              <td>Necessary · local storage</td>
+              <td>Until manually cleared</td>
+            </tr>
+            <tr>
+              <td><code>avalena_cookie_consent</code></td>
+              <td>Remembers your cookie/privacy preference choices.</td>
+              <td>Necessary · local storage</td>
+              <td>Until manually cleared</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>3. Analytics and marketing cookies</h2>
+        <p>
+          Our cookie settings offer "analytics" and "marketing" categories you can consent to.
+          These categories are not currently active — the site does not use any visitor analytics
+          or marketing tracking tools. If we introduce such tools in the future (e.g. to
+          understand site traffic), they will only be activated for users who have given consent,
+          and this Cookie Policy will be updated with details of the new cookies.
+        </p>
+
+        <h2>4. External resources (fonts and icons)</h2>
+        <p>
+          To display correctly, this site loads Google Fonts (Cormorant Garamond, Jost) and Font
+          Awesome icons from an external CDN (fonts.googleapis.com, fonts.gstatic.com,
+          cdnjs.cloudflare.com). Loading these resources causes your browser to connect to those
+          servers, which may technically log your IP address, independent of your cookie
+          preferences on this site. These resources are required for the page to render correctly.
+        </p>
+
+        <h2>5. Managing your cookie settings</h2>
+        <p>
+          You can change your choice at any time using the button below, or via the "Cookie
+          settings" link in the footer.
+        </p>
+        <button type="button" class="btn btn-outline-navy legal-cta" (click)="consent.openPreferences()">
+          Open cookie settings
+        </button>
+
+        <h2>6. Your consent</h2>
+        <p>
+          Necessary local storage does not require your consent, as it is essential for the site
+          to function. For all other categories we ask for your explicit consent before
+          activation, and you can withdraw it at any time via the cookie settings. Read more about
+          how we process personal data in our
+          <a routerLink="/politika-privatnosti">Privacy Policy</a>.
+        </p>
+
+      }
+
+    </div>
+  </section>
+
+</article>

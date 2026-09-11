@@ -97,5 +97,13 @@
       &copy; {{ year }} Avalena ·
       {{ 'FOOTER.RIGHTS' | translate }}
     </span>
+
+    <nav class="footer__legal">
+      <a routerLink="/politika-privatnosti">{{ 'LEGAL.PRIVACY_POLICY' | translate }}</a>
+      <a routerLink="/politika-kolacica">{{ 'LEGAL.COOKIE_POLICY' | translate }}</a>
+      <button type="button" (click)="consent.openPreferences()">
+        {{ 'LEGAL.COOKIE_SETTINGS' | translate }}
+      </button>
+    </nav>
   </div>
 </footer>

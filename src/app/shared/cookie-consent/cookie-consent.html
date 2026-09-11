@@ -1,0 +1,89 @@
+@if (consent.isVisible()) {
+  <div class="cookie-banner" role="dialog" aria-modal="false" [attr.aria-label]="'COOKIES.TITLE' | translate">
+    <div class="cookie-banner__inner">
+
+      @if (!consent.isDetailed()) {
+        <div class="cookie-banner__compact">
+          <div class="cookie-banner__text">
+            <h2>{{ 'COOKIES.TITLE' | translate }}</h2>
+            <p>
+              {{ 'COOKIES.TEXT' | translate }}
+              <a routerLink="/politika-privatnosti">{{ 'COOKIES.PRIVACY_LINK' | translate }}</a>
+              {{ 'COOKIES.AND' | translate }}
+              <a routerLink="/politika-kolacica">{{ 'COOKIES.COOKIE_LINK' | translate }}</a>.
+            </p>
+          </div>
+
+          <div class="cookie-banner__actions">
+            <button type="button" class="btn btn-outline-navy" (click)="openSettings()">
+              {{ 'COOKIES.SETTINGS' | translate }}
+            </button>
+            <button type="button" class="btn btn-outline-navy" (click)="consent.rejectNonEssential()">
+              {{ 'COOKIES.REJECT_ALL' | translate }}
+            </button>
+            <button type="button" class="btn btn-navy" (click)="consent.acceptAll()">
+              {{ 'COOKIES.ACCEPT_ALL' | translate }}
+            </button>
+          </div>
+        </div>
+      } @else {
+        <div class="cookie-banner__detailed">
+          <h2>{{ 'COOKIES.SETTINGS' | translate }}</h2>
+
+          <div class="cookie-category">
+            <div class="cookie-category__head">
+              <span class="cookie-category__title">{{ 'COOKIES.NECESSARY_TITLE' | translate }}</span>
+              <span class="cookie-category__always-on">{{ 'COOKIES.ALWAYS_ON' | translate }}</span>
+            </div>
+            <p>{{ 'COOKIES.NECESSARY_TEXT' | translate }}</p>
+          </div>
+
+          <div class="cookie-category">
+            <div class="cookie-category__head">
+              <span class="cookie-category__title">{{ 'COOKIES.ANALYTICS_TITLE' | translate }}</span>
+              <label class="cookie-switch">
+                <input
+                  type="checkbox"
+                  [checked]="consent.preferences().analytics"
+                  (change)="onAnalyticsChange($event)"
+                />
+                <span></span>
+              </label>
+            </div>
+            <p>{{ 'COOKIES.ANALYTICS_TEXT' | translate }}</p>
+          </div>
+
+          <div class="cookie-category">
+            <div class="cookie-category__head">
+              <span class="cookie-category__title">{{ 'COOKIES.MARKETING_TITLE' | translate }}</span>
+              <label class="cookie-switch">
+                <input
+                  type="checkbox"
+                  [checked]="consent.preferences().marketing"
+                  (change)="onMarketingChange($event)"
+                />
+                <span></span>
+              </label>
+            </div>
+            <p>{{ 'COOKIES.MARKETING_TEXT' | translate }}</p>
+          </div>
+
+          <div class="cookie-banner__actions">
+            @if (consent.hasDecided()) {
+              <button type="button" class="btn btn-outline-navy" (click)="consent.dismissPreferences()">
+                {{ 'COOKIES.CLOSE' | translate }}
+              </button>
+            }
+            <button type="button" class="btn btn-outline-navy" (click)="consent.rejectNonEssential()">
+              {{ 'COOKIES.REJECT_ALL' | translate }}
+            </button>
+            <button type="button" class="btn btn-navy" (click)="consent.savePreferences()">
+              {{ 'COOKIES.SAVE' | translate }}
+            </button>
+          </div>
+        </div>
+      }
+
+    </div>
+  </div>
+}

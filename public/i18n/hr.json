@@ -72,10 +72,36 @@
   },
   "BREADCRUMB": {
     "HOME": "Početna",
-    "ACCOMMODATION": "Smještaj"
+    "ACCOMMODATION": "Smještaj",
+    "PRIVACY": "Politika privatnosti",
+    "COOKIES": "Politika kolačića"
   },
   "NOT_FOUND": {
     "TITLE": "Stranica nije pronađena",
     "BACK": "Povratak na početnu"
+  },
+  "LEGAL": {
+    "PRIVACY_POLICY": "Politika privatnosti",
+    "COOKIE_POLICY": "Politika kolačića",
+    "COOKIE_SETTINGS": "Postavke kolačića"
+  },
+  "COOKIES": {
+    "TITLE": "Poštujemo vašu privatnost",
+    "TEXT": "Koristimo nužnu lokalnu pohranu za ispravan rad stranice, a uz vaš pristanak i za analitiku posjećenosti. Više doznajte u našoj",
+    "PRIVACY_LINK": "Politici privatnosti",
+    "AND": "i",
+    "COOKIE_LINK": "Politici kolačića",
+    "ACCEPT_ALL": "Prihvati sve",
+    "REJECT_ALL": "Odbij neobavezne",
+    "SETTINGS": "Postavke kolačića",
+    "SAVE": "Spremi postavke",
+    "CLOSE": "Zatvori",
+    "NECESSARY_TITLE": "Nužni kolačići",
+    "NECESSARY_TEXT": "Potrebni su za osnovni rad stranice (npr. pamćenje odabranog jezika i vaših postavki privatnosti). Uvijek su aktivni.",
+    "ANALYTICS_TITLE": "Analitički kolačići",
+    "ANALYTICS_TEXT": "Pomažu nam razumjeti kako posjetitelji koriste stranicu. Trenutno se ne koriste, a aktivirat će se isključivo uz vaš pristanak.",
+    "MARKETING_TITLE": "Marketinški kolačići",
+    "MARKETING_TEXT": "Služe za prikaz relevantnih oglasa. Trenutno se ne koriste, a aktivirat će se isključivo uz vaš pristanak.",
+    "ALWAYS_ON": "Uvijek aktivno"
   }
 }

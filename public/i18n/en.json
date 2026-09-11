@@ -72,10 +72,36 @@
   },
   "BREADCRUMB": {
     "HOME": "Home",
-    "ACCOMMODATION": "Accommodation"
+    "ACCOMMODATION": "Accommodation",
+    "PRIVACY": "Privacy Policy",
+    "COOKIES": "Cookie Policy"
   },
   "NOT_FOUND": {
     "TITLE": "Page not found",
     "BACK": "Back to home"
+  },
+  "LEGAL": {
+    "PRIVACY_POLICY": "Privacy Policy",
+    "COOKIE_POLICY": "Cookie Policy",
+    "COOKIE_SETTINGS": "Cookie settings"
+  },
+  "COOKIES": {
+    "TITLE": "We respect your privacy",
+    "TEXT": "We use necessary local storage for the site to work correctly, and, with your consent, for traffic analytics. Learn more in our",
+    "PRIVACY_LINK": "Privacy Policy",
+    "AND": "and",
+    "COOKIE_LINK": "Cookie Policy",
+    "ACCEPT_ALL": "Accept all",
+    "REJECT_ALL": "Reject non-essential",
+    "SETTINGS": "Cookie settings",
+    "SAVE": "Save preferences",
+    "CLOSE": "Close",
+    "NECESSARY_TITLE": "Necessary cookies",
+    "NECESSARY_TEXT": "Required for basic site functionality (e.g. remembering your chosen language and privacy settings). Always active.",
+    "ANALYTICS_TITLE": "Analytics cookies",
+    "ANALYTICS_TEXT": "Help us understand how visitors use the site. Not currently in use — will only be activated with your consent.",
+    "MARKETING_TITLE": "Marketing cookies",
+    "MARKETING_TEXT": "Used to show relevant ads. Not currently in use — will only be activated with your consent.",
+    "ALWAYS_ON": "Always active"
   }
 }

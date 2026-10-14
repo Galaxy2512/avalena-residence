@@ -1,4 +1,4 @@
-import { Component, HostListener, inject, OnDestroy, signal } from '@angular/core';
+import { Component, inject, OnDestroy, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Units } from '../../services/units';
 import { LangService } from '../../services/lang.service';
@@ -12,14 +12,8 @@ import { LangService } from '../../services/lang.service';
 export class Navbar implements OnDestroy {
   private readonly unitsService = inject(Units);
   protected readonly lang = inject(LangService);
-  protected readonly isScrolled = signal(false);
   protected readonly isMenuOpen = signal(false);
   protected readonly units = this.unitsService.getAll();
-
-  @HostListener('window:scroll')
-  onScroll(): void {
-    this.isScrolled.set(window.scrollY > 40);
-  }
 
   toggleMenu(): void {
     this.isMenuOpen.update((o) => !o);

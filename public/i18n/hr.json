@@ -41,8 +41,8 @@
     "AMENITIES_TITLE": "Sadržaji",
     "GALLERY_EYEBROW": "Galerija",
     "GALLERY_TITLE": "Prostori",
-    "OTHERS_EYEBROW": "Pogledajte i",
-    "OTHERS_TITLE": "Ostale jedinice u Avaleni",
+    "OTHERS_EYEBROW": "Pogledajte",
+    "OTHERS_TITLE": "",
     "BOOK_CTA": "Upit za rezervaciju",
     "PRICE_FROM": "od",
     "PRICE_NIGHT": "/ noć"
@@ -64,8 +64,8 @@
     "DESC": "Četiri jedinstveno uređene smještajne jedinice u Boriku, samo nekoliko minuta hoda od mora i centra Zadra.",
     "ACCOMMODATION": "Smještaj",
     "CONTACT": "Kontakt",
-    "ADDRESS": "Ul. Augusta Šenoe 22, Borik, Zadar",
-    "ADDRESS_2": "Ul. Augusta Šenoe 27A, Borik, Zadar",
+    "ADDRESS": "Ul. Augusta Šenoe 27, Borik, Zadar",
+    "ADDRESS_2": "Ul. Augusta Šenoe 22A, Borik, Zadar",
     "RESERVATIONS": "Rezervacije",
     "RESERVATIONS_TEXT": "Za upit o slobodnim terminima i cijenama javite nam se putem e-maila ili telefona",
     "RIGHTS": "Sva prava pridržana."

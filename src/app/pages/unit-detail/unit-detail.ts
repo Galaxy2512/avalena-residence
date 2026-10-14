@@ -60,6 +60,8 @@ export class UnitDetail {
         'Krevet za 1 osobu': 'Single bed',
         'Sofa-krevet': 'Sofa bed',
         'Sofa-krevet u dnevnom boravku': 'Sofa bed in living room',
+        'Kauč na rasklapanje': 'Sofa bed',
+        'Krevet na kat': 'Bunk bed',
       };
       return map[type] ?? type;
     }

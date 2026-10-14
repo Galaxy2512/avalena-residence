@@ -10,24 +10,26 @@ export class Units {
     {
       id: 'residence',
       name: 'Avalena Residence',
-      taglineHr: 'Apartmani za obitelji i dulje boravke',
-      taglineEn: 'Apartments for families and longer stays',
+      taglineHr: 'Sobe s bazenom, vrtom i besplatnim parkingom u Zadru | Preporučeno za odrasle',
+      taglineEn: 'Rooms with Pool, Garden & Free Parking in Zadar | Recommended for Adults',
       descriptionHr:
         'Prostrani apartmani s odvojenim dnevnim prostorom, potpuno opremljenom kuhinjom i privatnom terasom — idealno za obitelji.',
       descriptionEn:
         'Spacious apartments with separate living area, fully equipped kitchen and private terrace — ideal for families.',
       longDescriptionHr:
         'Avalena Residence nudi apartmane prilagođene obiteljima i gostima koji planiraju dulje boravke u Boriku. Svaki apartman ima odvojenu dnevnu sobu, potpuno opremljenu kuhinju i privatnu terasu ili balkon. Klima uređaj, besplatni WiFi i parking uključeni. 400 m od mora.',
+
       longDescriptionEn:
         'Avalena Residence offers apartments suited to families and guests planning longer stays in Borik. Each apartment has a separate living room, fully equipped kitchen and private terrace or balcony. Air conditioning, free WiFi and parking included. 400 m from the sea.',
       addressHr: 'Borik, Zadar',
       addressEn: 'Borik, Zadar',
-      heroImage: '/images/residence/bazen.jpg',
+      heroImage: '/images/residence/njuškalo slika.jpg',
       gallery: [
-        '/images/residence/582404466.jpg',
-        '/images/residence/883201012.jpg',
-        '/images/residence/dvor.jpg',
-        '/images/residence/bazen2.jpg',
+        '/images/residence/Druga.jpg',
+        '/images/residence/Prva.jpg',
+
+        '/images/residence/Treca.jpg',
+        '/images/residence/Cetvrta.jpg',
       ],
       rooms: [
         {
@@ -76,62 +78,8 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/582404466.jpg',
+          heroImage: '/images/residence/Double Room with Balcony.jpg',
           gallery: ['/images/residence/582404466.jpg', '/images/residence/883201012.jpg'],
-        },
-        {
-          id: 'cetverokrevetna',
-          name: 'Četverokrevetna soba',
-          nameEn: 'Quadruple Room',
-          descriptionHr:
-            'Smještaj od 31 m² sastoji se od dvije povezane sobe koje dijele balkon. Sadrži veliki bračni krevet, krevet na kat, satelitski TV, hladnjak, električno kuhalo i privatnu kupaonicu.',
-          descriptionEn:
-            'This 31 m² accommodation consists of two interconnected rooms sharing a balcony. It includes a large double bed, bunk bed, satellite TV, fridge, electric kettle and private bathroom.',
-          guests: 4,
-          sizeM2: 31,
-          hasBalcony: true,
-          beds: [
-            { type: 'Veliki bračni krevet', count: 1 },
-            { type: 'Krevet na kat', count: 1 },
-          ],
-          amenities: [
-            'Balkon',
-            'Dvije povezane sobe',
-            'Klima uređaj',
-            'Besplatni WiFi',
-            'TV s ravnim ekranom',
-            'Satelitski programi',
-            'Privatna kupaonica',
-            'Hladnjak',
-            'Električno kuhalo',
-            'Prostor za sjedenje',
-            'Radni stol',
-            'Vanjski namještaj',
-            'Ogrtač',
-            'Papuče',
-            'Fen',
-            'Grijanje',
-          ],
-          amenitiesEn: [
-            'Balcony',
-            'Two interconnected rooms',
-            'Air conditioning',
-            'Free WiFi',
-            'Flat-screen TV',
-            'Satellite channels',
-            'Private bathroom',
-            'Fridge',
-            'Electric kettle',
-            'Seating area',
-            'Desk',
-            'Outdoor furniture',
-            'Bathrobe',
-            'Slippers',
-            'Hairdryer',
-            'Heating',
-          ],
-          heroImage: '/images/residence/883201012.jpg',
-          gallery: ['/images/residence/883201012.jpg', '/images/residence/582404466.jpg'],
         },
         {
           id: 'dvokrevetna',
@@ -179,23 +127,27 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/dvor.jpg',
-          gallery: ['/images/residence/dvor.jpg', '/images/residence/582404466.jpg'],
+          heroImage: '/images/residence/Double Rooms.jpg',
+          gallery: ['/images/residence/dvor.jpg', '/images/residence/Double Rooms.jpg'],
         },
         {
-          id: 'twin-balkon',
-          name: 'Soba s 2 odvojena kreveta i balkonom',
-          nameEn: 'Twin Room with Balcony',
+          id: 'cetverokrevetna',
+          name: 'Trokrevetna soba',
+          nameEn: 'Comfort Triple Room',
           descriptionHr:
-            'Klimatizirana soba od 16 m² s dva odvojena kreveta, privatnim balkonom, TV-om sa satelitskim programima i privatnom kupaonicom.',
+            'Smještaj od 31 m² sastoji se od dvije povezane sobe koje dijele balkon. Sadrži veliki bračni krevet, krevet na kat, satelitski TV, hladnjak, električno kuhalo i privatnu kupaonicu.',
           descriptionEn:
-            'Air-conditioned 16 m² room with two single beds, a private balcony, satellite TV and a private bathroom.',
-          guests: 2,
-          sizeM2: 16,
+            'This 31 m² accommodation consists of two interconnected rooms sharing a balcony. It includes a large double bed, bunk bed, satellite TV, fridge, electric kettle and private bathroom.',
+          guests: 3,
+          sizeM2: 31,
           hasBalcony: true,
-          beds: [{ type: 'Krevet za 1 osobu', count: 2 }],
+          beds: [
+            { type: 'Veliki bračni krevet', count: 1 },
+            { type: 'Krevet na kat', count: 1 },
+          ],
           amenities: [
             'Balkon',
+            'Dvije povezane sobe',
             'Klima uređaj',
             'Besplatni WiFi',
             'TV s ravnim ekranom',
@@ -213,6 +165,7 @@ export class Units {
           ],
           amenitiesEn: [
             'Balcony',
+            'Two interconnected rooms',
             'Air conditioning',
             'Free WiFi',
             'Flat-screen TV',
@@ -228,9 +181,10 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/bazen2.jpg',
-          gallery: ['/images/residence/bazen2.jpg', '/images/residence/883201012.jpg'],
+          heroImage: '/images/residence/Trokrevetna.jpg',
+          gallery: ['/images/residence/883201012.jpg', '/images/residence/Trokrevetna.jpg'],
         },
+
         {
           id: 'king-balkon',
           name: 'King soba s balkonom',
@@ -277,8 +231,8 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/582404466.jpg',
-          gallery: ['/images/residence/582404466.jpg', '/images/residence/bazen2.jpg'],
+          heroImage: '/images/residence/King size.jpg',
+          gallery: ['/images/residence/King size.jpg', '/images/residence/King size.jpg'],
         },
         {
           id: 'trokrevetna-terasa',
@@ -331,19 +285,22 @@ export class Units {
             'Slippers',
             'Hairdryer',
           ],
-          heroImage: '/images/residence/dvor.jpg',
-          gallery: ['/images/residence/dvor.jpg', '/images/residence/bazen2.jpg'],
+          heroImage: '/images/residence/Trokrevetna soba sa terasom.jpg',
+          gallery: [
+            '/images/residence/Trokrevetna soba sa terasom.jpg',
+            '/images/residence/Trokrevetna soba sa terasom.jpg',
+          ],
         },
         {
           id: 'deluxe-trokrevetna',
           name: 'Deluxe trokrevetna soba',
           nameEn: 'Deluxe Triple Room',
           descriptionHr:
-            'Vrlo prostrana soba od 70 m² s velikim bračnim krevetom, kaučem na rasklapanje, prostorom za sjedenje i privatnom terasom. Sadrži TV ravnog ekrana, radni stol i privatnu kupaonicu.',
+            'Vrlo prostrana soba od 30 m² s velikim bračnim krevetom, kaučem na rasklapanje, prostorom za sjedenje i privatnom terasom. Sadrži TV ravnog ekrana, radni stol i privatnu kupaonicu.',
           descriptionEn:
-            'Very spacious 70 m² room with a large double bed, sofa bed, seating area and private terrace. Includes a flat-screen TV, desk and private bathroom.',
+            'Very spacious 30 m² room with a large double bed, sofa bed, seating area and private terrace with 28 m². Includes a flat-screen TV, desk and private bathroom.',
           guests: 3,
-          sizeM2: 70,
+          sizeM2: 30,
           hasBalcony: true,
           beds: [
             { type: 'Veliki bračni krevet', count: 1 },
@@ -389,11 +346,11 @@ export class Units {
             'Slippers',
             'Hairdryer',
           ],
-          heroImage: '/images/residence/883201012.jpg',
+          heroImage: '/images/residence/Trokrevetna soba Deluxe.jpg',
           gallery: [
-            '/images/residence/883201012.jpg',
-            '/images/residence/dvor.jpg',
-            '/images/residence/bazen2.jpg',
+            '/images/residence/Trokrevetna soba Deluxe.jpg',
+            '/images/residence/Trokrevetna soba Deluxe.jpg',
+            '/images/residence/Trokrevetna soba Deluxe.jpg',
           ],
         },
         {
@@ -445,7 +402,7 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/582404466.jpg',
+          heroImage: '/images/residence/Standardna cetvernokrevetna.jpg',
           gallery: ['/images/residence/582404466.jpg', '/images/residence/883201012.jpg'],
         },
         {
@@ -497,7 +454,7 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/bazen2.jpg',
+          heroImage: '/images/residence/Trokrevetna soba sa balkonom.jpg',
           gallery: ['/images/residence/bazen2.jpg', '/images/residence/dvor.jpg'],
         },
       ],
@@ -508,9 +465,9 @@ export class Units {
     // ──────────────────────────────────────────────────────
     {
       id: 'vila-ines',
-      name: 'Avalena Art Villa Ines',
-      taglineHr: 'Bazen · Galerija · 400 m od mora',
-      taglineEn: 'Pool · Art gallery · 400 m from the sea',
+      name: 'Art Villa Ines',
+      taglineHr: 'Sobe s bazenom, vrtom i besplatnim parkingom u Zadru | Preporučeno za odrasle',
+      taglineEn: 'Rooms with Pool, Garden & Free Parking in Zadar | Recommended for Adults',
       descriptionHr:
         'Guesthouse s obiteljskim sobama, sezonskim bazenom od 80 m², mediteranskim vrtom i galerijom umjetnina — 400 m od plaže.',
       descriptionEn:
@@ -521,22 +478,22 @@ export class Units {
         'Avalena Vila Ines is set in a quiet part of Borik, 400 m from a pebbly beach. The villa features an 80 m² seasonal outdoor pool, a large Mediterranean garden with terraces and gazebos, and the art gallery of owner Dr. Ines Jurin. Rooms are air-conditioned, decorated with original paintings, with sea or garden views. Private bathroom with shower, hairdryer and robes. Free parking for all guests.',
       addressHr: 'Borik, Zadar',
       addressEn: 'Borik, Zadar',
-      heroImage: '/images/vila-ines/883427780.jpg',
+      heroImage: '/images/vila-ines/Avalena_Vila_Ines.jpg',
       gallery: [
-        '/images/vila-ines/528894444.jpg',
-        '/images/vila-ines/582271891.jpg',
-        '/images/vila-ines/582272087.jpg',
-        '/images/vila-ines/883427780.jpg',
+        '/images/vila-ines/Druga.jpg',
+        '/images/vila-ines/Treca.jpg',
+        '/images/vila-ines/Cetvrta.jpg',
+        '/images/vila-ines/Prva.jpg',
       ],
       rooms: [
         {
           id: 'dvokrevetna-balkon',
-          name: 'Dvokrevetna soba s bračnim krevetom i balkonom',
-          nameEn: 'Double Room with Double Bed and Balcony',
+          name: 'Dvokrevetna soba s balkonom',
+          nameEn: 'Double Room with Balcony',
           descriptionHr:
-            'Klimatizirana soba od 20 m² s namještenim balkonom i pogledom na more, bazen i grad. Sadrži prostor za sjedenje, satelitski TV ravnog ekrana, hladnjak i električno kuhalo. Privatna kupaonica opremljena je kadom, tušem, fenom, ogrtačem, papučama i besplatnim toaletnim priborom.',
+            'Klimatizirana soba od 20 m² s namještenim balkonom i pogledom na more, bazen i grad. Sadrži prostor za sjedenje, satelitski TV ravnog ekrana, hladnjak i električno kuhalo. Privatna kupaonica opremljena je kadom, tušem, fenom, ogrtačem i papučama.',
           descriptionEn:
-            'Featuring a furnished balcony with a sea view, this air-conditioned room offers a seating area with a flat-screen satellite TV, a fridge and an electric kettle. The bathroom is equipped with a bathtub, a shower and provides a hairdryer, a bathrobe and free toiletries.',
+            'Featuring a furnished balcony with a sea view, this air-conditioned room offers a seating area with a flat-screen satellite TV, a fridge and an electric kettle. The bathroom is equipped with a bathtub, a shower and provides a hairdryer and bathrobe.',
           guests: 2,
           sizeM2: 20,
           hasBalcony: true,
@@ -597,7 +554,7 @@ export class Units {
             'Upper floors accessible by stairs only',
             'No smoking',
           ],
-          heroImage: '/images/vila-ines/528894444.jpg',
+          heroImage: '/images/vila-ines/Dobule Room with Balcony.jpg',
           gallery: [
             '/images/vila-ines/528894444.jpg',
             '/images/vila-ines/582271891.jpg',
@@ -608,11 +565,11 @@ export class Units {
         {
           id: 'dvokrevetna',
           name: 'Dvokrevetna soba s bračnim krevetom',
-          nameEn: 'Double Room with Double Bed',
+          nameEn: 'Double Room ',
           descriptionHr:
-            'Klimatizirana soba od 18 m² s pogledom na more, vrt i grad. Opremljena je prostorom za sjedenje, satelitskim TV-om ravnog ekrana, hladnjakom i električnim kuhalom. Privatna kupaonica ima kadu ili tuš, fen, ogrtač, papuče i besplatni toaletni pribor.',
+            'Klimatizirana soba od 18 m² s pogledom na vrt. Opremljena je prostorom za sjedenje, satelitskim TV-om ravnog ekrana, hladnjakom i električnim kuhalom. Privatna kupaonica ima kadu ili tuš, fen, ogrtač, papuče i besplatni toaletni pribor.',
           descriptionEn:
-            'Overlooking the sea, this air-conditioned room comes with a seating area and a flat-screen satellite TV, as well as a fridge and an electric kettle. The bathroom is fitted with a shower and provides a hairdryer and a bathrobe.',
+            'This air-conditioned room comes with a seating area and a flat-screen satellite TV, as well as a fridge and an electric kettle. The bathroom is fitted with a shower and provides a hairdryer and a bathrobe.',
           guests: 2,
           sizeM2: 18,
           hasBalcony: false,
@@ -669,7 +626,7 @@ export class Units {
             'Upper floors accessible by stairs only',
             'No smoking',
           ],
-          heroImage: '/images/vila-ines/582271891.jpg',
+          heroImage: '/images/vila-ines/Double Room.jpg',
           gallery: [
             '/images/vila-ines/582271891.jpg',
             '/images/vila-ines/528894444.jpg',
@@ -746,7 +703,7 @@ export class Units {
             'Heating',
             'No smoking',
           ],
-          heroImage: '/images/vila-ines/582272087.jpg',
+          heroImage: '/images/vila-ines/Quadruple room.jpg',
           gallery: [
             '/images/vila-ines/582272087.jpg',
             '/images/vila-ines/883427780.jpg',
@@ -828,7 +785,7 @@ export class Units {
             'Heating',
             'No smoking',
           ],
-          heroImage: '/images/vila-ines/883427780.jpg',
+          heroImage: '/images/vila-ines/One Bedroom apartment.jpg',
           gallery: [
             '/images/vila-ines/883427780.jpg',
             '/images/vila-ines/582272087.jpg',
@@ -838,14 +795,14 @@ export class Units {
         },
         {
           id: 'suite-1-spavaca',
-          name: 'Suite s 1 spavaćom sobom',
-          nameEn: 'One-Bedroom Suite',
+          name: 'Suite',
+          nameEn: 'Suite',
           descriptionHr:
             'Klimatizirani suite od 45 m² s jednom spavaćom sobom, dnevnim boravkom, velikim bračnim krevetom i kaučem na rasklapanje. Ima namješteni balkon s pogledom na more, vrt i grad, vlastitu čajnu kuhinju, blagovaonicu i privatnu kupaonicu.',
           descriptionEn:
-            'Air-conditioned suite featuring a furnished balcony, a living room and a flat-screen satellite TV, as well as a fridge and an electric kettle. The bathroom is fitted with a shower and provides a hairdryer and a bathrobe.',
+            'Air-conditioned suite featuring a furnished balcony, a living room and a flat-screen satellite TV, as well as a fridge and an electric kettle. The bathroom is fitted with a shower and provides a hairdryer, a bathrobe and kitchenette.',
           guests: 4,
-          sizeM2: 45,
+          sizeM2: 35,
           hasBalcony: true,
           beds: [
             { type: 'Veliki bračni krevet', count: 1 },
@@ -921,7 +878,7 @@ export class Units {
             'Upper floors accessible by stairs only',
             'No smoking',
           ],
-          heroImage: '/images/vila-ines/528894444.jpg',
+          heroImage: '/images/vila-ines/Suite.jpg',
           gallery: [
             '/images/vila-ines/528894444.jpg',
             '/images/vila-ines/582271891.jpg',
@@ -938,8 +895,8 @@ export class Units {
     {
       id: 'rooms',
       name: 'Avalena Rooms',
-      taglineHr: 'Udobne sobe s balkonom u srcu Borika',
-      taglineEn: 'Comfortable rooms with balconies in the heart of Borik',
+      taglineHr: '',
+      taglineEn: '',
       descriptionHr:
         'Šest kategorija soba — od kompaktnih dvokrevetnih do prostranijih četverokrevetnih — s drvenim podovima, balkonima i pogledom na grad.',
       descriptionEn:
@@ -950,7 +907,7 @@ export class Units {
         'Avalena Rooms offers a variety of room categories suited to couples, families and travellers looking for a comfortable stay in Borik. All rooms feature air conditioning, flat-screen TV, WiFi, a fridge and a private bathroom. Check-in from 15:00, check-out by 10:00.',
       addressHr: 'Ul. Augusta Šenoe 22, Borik, Zadar',
       addressEn: 'Ul. Augusta Šenoe 22, Borik, Zadar',
-      heroImage: '/images/rooms/684880052.jpg',
+      heroImage: '/images/rooms/Naslovna_Rooms.jpg',
       gallery: [
         '/images/rooms/558049770.jpg',
         '/images/rooms/558689713.jpg',
@@ -994,11 +951,49 @@ export class Units {
             'Heating',
             'Electric kettle',
           ],
-          heroImage: '/images/rooms/558049770.jpg',
+          heroImage: '/images/rooms/Double room with balcony.jpg',
           gallery: [
             'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=85&w=1200&auto=format&fit=crop',
             'https://images.unsplash.com/photo-1560185007-5f0bb1866cab?q=85&w=1200&auto=format&fit=crop',
             'https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=85&w=1200&auto=format&fit=crop',
+          ],
+        },
+        {
+          id: 'dvokrevetna-standard',
+          name: 'Dvokrevetna soba s bračnim krevetom',
+          nameEn: 'Standard Double Room',
+          descriptionHr:
+            'Standardna soba od 22 m² s prostorom za sjedenje, TV ravnog ekrana i privatnom kupaonicom. Bez balkona.',
+          descriptionEn:
+            'Standard 22 m² room with seating area, flat-screen TV and private bathroom. No balcony.',
+          guests: 2,
+          sizeM2: 22,
+          hasBalcony: false,
+          beds: [{ type: 'Veliki bračni krevet', count: 1 }],
+          amenities: [
+            'Klima uređaj',
+            'Besplatni WiFi',
+            'TV s ravnim ekranom',
+            'Privatna kupaonica',
+            'Hladnjak',
+            'Radni stol',
+            'Drveni pod',
+            'Grijanje',
+          ],
+          amenitiesEn: [
+            'Air conditioning',
+            'Free WiFi',
+            'Flat-screen TV',
+            'Private bathroom',
+            'Fridge',
+            'Desk',
+            'Hardwood floor',
+            'Heating',
+          ],
+          heroImage: '/images/rooms/Double bed.jpg',
+
+          gallery: [
+            'https://images.unsplash.com/photo-1505693314120-0d443867891c?q=85&w=1200&auto=format&fit=crop',
           ],
         },
         {
@@ -1035,12 +1030,13 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage: '/images/rooms/558689713.jpg', //treba mjenjati sve
+          heroImage: '/images/rooms/Lowbudget.jpg', //treba mjenjati sve
           gallery: [
             'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=85&w=1200&auto=format&fit=crop',
             'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1200&auto=format&fit=crop',
           ],
         },
+
         {
           id: 'trokrevetna-balkon',
           name: 'Trokrevetna soba s balkonom',
@@ -1078,7 +1074,7 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage: '/images/rooms/563273867.jpg',
+          heroImage: '/images/rooms/Triple with balcony.jpg',
 
           gallery: [
             'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=85&w=1200&auto=format&fit=crop',
@@ -1119,7 +1115,7 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage: '/images/rooms/563273867.jpg',
+          heroImage: '/images/rooms/Triple economy.jpg',
 
           gallery: [
             'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1200&auto=format&fit=crop',
@@ -1162,49 +1158,11 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage: '/images/rooms/563273867.jpg',
+          heroImage: '/images/rooms/Quadriple.jpg',
 
           gallery: [
             'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=85&w=1200&auto=format&fit=crop',
             'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=85&w=1200&auto=format&fit=crop',
-          ],
-        },
-        {
-          id: 'dvokrevetna-standard',
-          name: 'Dvokrevetna soba s bračnim krevetom',
-          nameEn: 'Standard Double Room',
-          descriptionHr:
-            'Standardna soba od 22 m² s prostorom za sjedenje, TV ravnog ekrana i privatnom kupaonicom. Bez balkona.',
-          descriptionEn:
-            'Standard 22 m² room with seating area, flat-screen TV and private bathroom. No balcony.',
-          guests: 2,
-          sizeM2: 22,
-          hasBalcony: false,
-          beds: [{ type: 'Veliki bračni krevet', count: 1 }],
-          amenities: [
-            'Klima uređaj',
-            'Besplatni WiFi',
-            'TV s ravnim ekranom',
-            'Privatna kupaonica',
-            'Hladnjak',
-            'Radni stol',
-            'Drveni pod',
-            'Grijanje',
-          ],
-          amenitiesEn: [
-            'Air conditioning',
-            'Free WiFi',
-            'Flat-screen TV',
-            'Private bathroom',
-            'Fridge',
-            'Desk',
-            'Hardwood floor',
-            'Heating',
-          ],
-          heroImage: '/images/rooms/563273867.jpg',
-
-          gallery: [
-            'https://images.unsplash.com/photo-1505693314120-0d443867891c?q=85&w=1200&auto=format&fit=crop',
           ],
         },
       ],
@@ -1216,19 +1174,19 @@ export class Units {
     {
       id: 'penthouse',
       name: 'Avalena Penthouse',
-      taglineHr: '200 m² · 5 spavaćih soba · Panoramska terasa',
-      taglineEn: '200 m² · 5 bedrooms · Panoramic terrace',
+      taglineHr: '',
+      taglineEn: '',
       descriptionHr:
         'Luksuzni apartman na vrhu zgrade s pet spavaćih soba, pet kupaonica i prostranom terasom s pogledom na grad.',
       descriptionEn:
         'Luxury top-floor apartment with five bedrooms, five bathrooms and a spacious terrace overlooking the city.',
       longDescriptionHr:
-        'Avalena Penthouse je prostrani luksuzni apartman od 200 m² smješten na vrhu zgrade s pogledom na grad i panoramskom terasom. Apartman raspolaže s pet spavaćih soba, pet kupaonica, velikom dnevnom sobom s 49" Smart TV-om, potpuno opremljenom kuhinjom (perilica suđa, ploča za kuhanje, mikrovalna), te pralionom rublja. Svi kreveti su dugi > 2 metra. Netflix i streaming servisi dostupni. Gornji katovi — isključivo stepenicama.',
+        'Avalena Penthouse je prostrani luksuzni apartman od 200 m² smješten na vrhu zgrade s pogledom na grad i panoramskom terasom. Apartman raspolaže s pet spavaćih soba, pet kupaonica, velikom dnevnom sobom s 49" Smart TV-om, potpuno opremljenom kuhinjom (perilica suđa, ploča za kuhanje, mikrovalna), te pralionom rublja. Svi kreveti su dugi > 2 metra. Netflix i streaming servisi dostupni.',
       longDescriptionEn:
-        'Avalena Penthouse is a 200 m² luxury apartment on the top floor with city views and a panoramic terrace. The apartment features five bedrooms, five bathrooms, a large living room with a 49" Smart TV, a fully equipped kitchen (dishwasher, hob, microwave) and a washing machine. All beds exceed 2 metres. Netflix and streaming services available. Upper floors — stairs only.',
+        'Avalena Penthouse is a 200 m² luxury apartment on the top floor with city views and a panoramic terrace. The apartment features five bedrooms, five bathrooms, a large living room with a 49" Smart TV, a fully equipped kitchen (dishwasher, hob, microwave) and a washing machine. All beds exceed 2 metres. Netflix and streaming services available.',
       addressHr: 'Ul. Augusta Šenoe 22, Borik, Zadar',
       addressEn: 'Ul. Augusta Šenoe 22, Borik, Zadar',
-      heroImage: '/images/penthouse/terasa.jpg',
+      heroImage: '/images/penthouse/Avalena_Penthouse.jpg',
       gallery: [
         '/images/penthouse/terasa.jpg',
         '/images/penthouse/dnevni-boravak.jpg',
@@ -1280,7 +1238,7 @@ export class Units {
             'Netflix/Streaming',
             'Beds > 2 m',
           ],
-          heroImage: '/images/penthouse/terasa.jpg',
+          heroImage: '/images/penthouse/Avalena.jpg',
           gallery: [
             '/images/penthouse/terasa.jpg',
             '/images/penthouse/dnevni-boravak.jpg',

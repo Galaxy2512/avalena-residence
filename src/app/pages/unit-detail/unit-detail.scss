@@ -16,6 +16,7 @@
 .unit-about__grid { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(280px, 1fr); gap: 5rem; align-items: start;
   h2 { font-size: clamp(2rem, 3vw, 2.8rem); font-weight: 300; color: var(--c-navy); margin: .8rem 0 1.6rem; }
   p  { font-size: 1rem; line-height: 1.9; color: var(--c-stone); }
+  .unit-about__subtitle { margin: -.6rem 0 1.6rem; line-height: 1.8; }
 }
 .unit-about__sidebar { background: var(--c-navy); color: var(--c-cream); padding: 2.6rem; position: sticky; top: calc(var(--nav-h) + 1.5rem); }
 .unit-about__sidebar h4 { font-family: var(--f-sans); font-size: .62rem; letter-spacing: .2em; text-transform: uppercase; color: var(--c-gold); opacity: .8; margin-bottom: .8rem; }

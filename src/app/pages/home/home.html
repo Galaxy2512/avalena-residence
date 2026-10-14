@@ -2,7 +2,7 @@
 <section class="hero">
   <div class="hero__bg">
     <img
-      src="/images/rooms/581052507.jpg"
+      src="/images/ZA%20NASLOVNU.jpg"
       alt="Jadranska obala"
       class="hero__img"
     />
@@ -144,13 +144,15 @@
       </a>
 
       <div class="unit-row__content">
-        <span class="eyebrow">
-          {{ getTagline(unit) }}
-        </span>
-
         <h3 class="unit-row__name">
           {{ unit.name }}
         </h3>
+
+        @if (getTagline(unit)) {
+          <span class="eyebrow">
+            {{ getTagline(unit) }}
+          </span>
+        }
 
         <p class="unit-row__desc">
           {{ getDescription(unit) }}

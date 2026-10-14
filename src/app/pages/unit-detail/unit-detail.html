@@ -5,7 +5,6 @@
     <img class="unit-hero__image" [src]="unit()!.heroImage" [alt]="unit()!.name" />
     <div class="unit-hero__overlay"></div>
     <div class="unit-hero__content container">
-      <span class="eyebrow eyebrow--light">{{ tagline(unit()!) }}</span>
       <h1>{{ unit()!.name }}</h1>
     </div>
   </section>
@@ -23,6 +22,9 @@
       <div>
         <span class="eyebrow">{{ 'UNIT.AMENITIES_TITLE' | translate }}</span>
         <h2>{{ unit()!.name }}</h2>
+        @if (tagline(unit()!)) {
+          <span class="eyebrow unit-about__subtitle">{{ tagline(unit()!) }}</span>
+        }
         <p>{{ desc(unit()!) }}</p>
       </div>
     </div>

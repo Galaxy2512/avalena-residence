@@ -1,19 +1,16 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http';
-import { provideTranslateService } from '@ngx-translate/core';
-import { provideTranslateHttpLoader } from '@ngx-translate/http-loader';
+import { provideTranslateLoader, provideTranslateService } from '@ngx-translate/core';
 import { routes } from './app.routes';
+import { BundledTranslateLoader } from './services/translate-loader';
 
 export const appConfig: ApplicationConfig = {
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideRouter(
       routes,
-      withInMemoryScrolling({ scrollPositionRestoration: 'top', anchorScrolling: 'enabled' })
+      withInMemoryScrolling({ scrollPositionRestoration: 'top', anchorScrolling: 'enabled' }),
     ),
-    provideHttpClient(),
-    provideTranslateService({ lang: 'hr' }),
-    provideTranslateHttpLoader({ prefix: '/i18n/', suffix: '.json', enforceLoading: true }),
+    provideTranslateService({ lang: 'hr', loader: provideTranslateLoader(BundledTranslateLoader) }),
   ],
 };

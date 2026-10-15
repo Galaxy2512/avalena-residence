@@ -1,10 +1,11 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, switchMap } from 'rxjs';
 import { TranslatePipe } from '@ngx-translate/core';
 import { Units } from '../../services/units';
 import { LangService } from '../../services/lang.service';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-room-detail',
@@ -29,6 +30,24 @@ export class RoomDetail {
     ),
     { initialValue: undefined },
   );
+
+  private readonly seo = inject(SeoService);
+
+  constructor() {
+    effect(() => {
+      const data = this.data();
+      const lang = this.lang.current();
+      if (!data) return;
+      const { unit, room } = data;
+      this.seo.update({
+        title: `${lang === 'hr' ? room.name : room.nameEn} – ${unit.name}, Borik, Zadar`,
+        description: lang === 'hr' ? room.descriptionHr : room.descriptionEn,
+        path: `/smjestaj/${unit.id}/${room.id}`,
+        image: room.heroImage,
+        lang,
+      });
+    });
+  }
 
   selectImage(src: string): void {
     this.activeImage.set(src);

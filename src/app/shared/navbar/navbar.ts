@@ -1,4 +1,4 @@
-import { Component, inject, OnDestroy, signal } from '@angular/core';
+import { Component, DOCUMENT, inject, OnDestroy, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Units } from '../../services/units';
 import { LangService } from '../../services/lang.service';
@@ -12,6 +12,7 @@ import { LangService } from '../../services/lang.service';
 export class Navbar implements OnDestroy {
   private readonly unitsService = inject(Units);
   protected readonly lang = inject(LangService);
+  private readonly document = inject(DOCUMENT);
   protected readonly isMenuOpen = signal(false);
   protected readonly units = this.unitsService.getAll();
 
@@ -28,10 +29,10 @@ export class Navbar implements OnDestroy {
   ngOnDestroy(): void {
     // Osiguraj da body scroll ostane otključan ako se komponenta uništi
     // dok je mobilni izbornik otvoren (npr. navigacija/route change).
-    document.body.style.overflow = '';
+    this.document.body.style.overflow = '';
   }
 
   private updateBodyScroll(): void {
-    document.body.style.overflow = this.isMenuOpen() ? 'hidden' : '';
+    this.document.body.style.overflow = this.isMenuOpen() ? 'hidden' : '';
   }
 }

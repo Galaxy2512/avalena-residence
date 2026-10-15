@@ -17,13 +17,13 @@ export class Units {
       descriptionEn:
         'Spacious apartments with separate living area, fully equipped kitchen and private terrace — ideal for families.',
       longDescriptionHr:
-        'Avalena Residence nudi apartmane prilagođene obiteljima i gostima koji planiraju dulje boravke u Boriku. Svaki apartman ima odvojenu dnevnu sobu, potpuno opremljenu kuhinju i privatnu terasu ili balkon. Klima uređaj, besplatni WiFi i parking uključeni. 400 m od mora.',
+        'Avalena Residence nudi apartmane prilagođene obiteljima i gostima koji planiraju dulje boravke u Boriku. Svaki apartman ima odvojenu dnevnu sobu, potpuno opremljenu kuhinju i privatnu terasu ili balkon. Klima uređaj, besplatni WiFi i parking uključeni. 600 m od mora.',
 
       longDescriptionEn:
-        'Avalena Residence offers apartments suited to families and guests planning longer stays in Borik. Each apartment has a separate living room, fully equipped kitchen and private terrace or balcony. Air conditioning, free WiFi and parking included. 400 m from the sea.',
+        'Avalena Residence offers apartments suited to families and guests planning longer stays in Borik. Each apartment has a separate living room, fully equipped kitchen and private terrace or balcony. Air conditioning, free WiFi and parking included. 600 m from the sea.',
       addressHr: 'Borik, Zadar',
       addressEn: 'Borik, Zadar',
-      heroImage: '/images/residence/njuškalo slika.jpg',
+      heroImage: '/images/residence/residence-naslovna.jpg',
       gallery: [
         '/images/residence/Druga.jpg',
         '/images/residence/Prva.jpg',
@@ -469,13 +469,13 @@ export class Units {
       taglineHr: 'Sobe s bazenom, vrtom i besplatnim parkingom u Zadru | Preporučeno za odrasle',
       taglineEn: 'Rooms with Pool, Garden & Free Parking in Zadar | Recommended for Adults',
       descriptionHr:
-        'Guesthouse s obiteljskim sobama, sezonskim bazenom od 80 m², mediteranskim vrtom i galerijom umjetnina — 400 m od plaže.',
+        'Guesthouse s obiteljskim sobama, sezonskim bazenom od 80 m², mediteranskim vrtom i galerijom umjetnina — 600 m od plaže.',
       descriptionEn:
-        'Guest house with family rooms, 80 m² seasonal pool, Mediterranean garden and art gallery — 400 m from the beach.',
+        'Guest house with family rooms, 80 m² seasonal pool, Mediterranean garden and art gallery — 600 m from the beach.',
       longDescriptionHr:
-        'Avalena Vila Ines smještena je u mirnom dijelu Borika, 400 m od šljunčane plaže. Vila raspolaže sezonskim vanjskim bazenom (80 m²), prostranim mediteranskim vrtom s terasama i gazebima, te galerijom umjetnina vlasnice dr. Ines Jurin. Sobe su klimatizirane, ukrašene originalnim slikama, s pogledom na more ili vrt. Privatna kupaonica s tušem, fenom i ogrtačima. Besplatno parkiralište za sve goste.',
+        'Avalena Vila Ines smještena je u mirnom dijelu Borika, 600 m od šljunčane plaže. Vila raspolaže sezonskim vanjskim bazenom (80 m²), prostranim mediteranskim vrtom s terasama i gazebima, te galerijom umjetnina vlasnice dr. Ines Jurin. Sobe su klimatizirane, ukrašene originalnim slikama, s pogledom na more ili vrt. Privatna kupaonica s tušem, fenom i ogrtačima. Besplatno parkiralište za sve goste.',
       longDescriptionEn:
-        'Avalena Vila Ines is set in a quiet part of Borik, 400 m from a pebbly beach. The villa features an 80 m² seasonal outdoor pool, a large Mediterranean garden with terraces and gazebos, and the art gallery of owner Dr. Ines Jurin. Rooms are air-conditioned, decorated with original paintings, with sea or garden views. Private bathroom with shower, hairdryer and robes. Free parking for all guests.',
+        'Avalena Vila Ines is set in a quiet part of Borik, 600 m from a pebbly beach. The villa features an 80 m² seasonal outdoor pool, a large Mediterranean garden with terraces and gazebos, and the art gallery of owner Dr. Ines Jurin. Rooms are air-conditioned, decorated with original paintings, with sea or garden views. Private bathroom with shower, hairdryer and robes. Free parking for all guests.',
       addressHr: 'Borik, Zadar',
       addressEn: 'Borik, Zadar',
       heroImage: '/images/vila-ines/Avalena_Vila_Ines.jpg',

@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, effect, inject, signal } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map, switchMap } from 'rxjs';
@@ -6,6 +6,7 @@ import { TranslatePipe } from '@ngx-translate/core';
 import { Units } from '../../services/units';
 import { LangService } from '../../services/lang.service';
 import { RentalUnit, Room } from '../../services/unit.model';
+import { lodgingJsonLd, SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-unit-detail',
@@ -30,6 +31,24 @@ export class UnitDetail {
     ),
     { initialValue: undefined },
   );
+
+  private readonly seo = inject(SeoService);
+
+  constructor() {
+    effect(() => {
+      const unit = this.unit();
+      const lang = this.lang.current();
+      if (!unit) return;
+      this.seo.update({
+        title: `${unit.name} – ${lang === 'hr' ? 'smještaj u Boriku, Zadar' : 'accommodation in Borik, Zadar'}`,
+        description: lang === 'hr' ? unit.descriptionHr : unit.descriptionEn,
+        path: `/smjestaj/${unit.id}`,
+        image: unit.heroImage,
+        lang,
+        jsonLd: lodgingJsonLd(unit, lang),
+      });
+    });
+  }
 
   protected readonly otherUnits = (current: RentalUnit | undefined) =>
     this.unitsService.getAll().filter((u) => u.id !== current?.id);

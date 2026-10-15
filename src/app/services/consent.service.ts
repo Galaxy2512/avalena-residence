@@ -1,4 +1,5 @@
-import { Injectable, computed, signal } from '@angular/core';
+import { Injectable, PLATFORM_ID, computed, inject, signal } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 
 export interface ConsentPreferences {
   necessary: true;
@@ -26,6 +27,7 @@ const DEFAULT_PREFERENCES: ConsentPreferences = {
 
 @Injectable({ providedIn: 'root' })
 export class ConsentService {
+  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
   private readonly stored = signal<StoredConsent | null>(this.readStored());
 
   readonly hasDecided = computed(() => this.stored() !== null);
@@ -38,7 +40,10 @@ export class ConsentService {
   /** True when the banner/panel was explicitly reopened (e.g. from the footer). */
   private readonly reopened = signal(false);
 
-  readonly isVisible = computed(() => !this.hasDecided() || this.reopened());
+  // Banner se ne prerenderira u HTML, inače bi bljesnuo i gostima koji su već odlučili.
+  readonly isVisible = computed(
+    () => this.isBrowser && (!this.hasDecided() || this.reopened()),
+  );
 
   /** Use before firing any non-essential script (analytics/marketing pixels). */
   hasConsent(category: ConsentCategory): boolean {
@@ -89,6 +94,7 @@ export class ConsentService {
   }
 
   private readStored(): StoredConsent | null {
+    if (!this.isBrowser) return null;
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (!raw) return null;

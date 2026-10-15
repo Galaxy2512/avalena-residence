@@ -1,8 +1,10 @@
-import { AfterViewInit, Component, ElementRef, inject, OnDestroy } from '@angular/core';
+import { AfterViewInit, Component, effect, ElementRef, inject, OnDestroy, PLATFORM_ID } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { TranslatePipe } from '@ngx-translate/core';
+import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { Units } from '../../services/units';
 import { LangService } from '../../services/lang.service';
+import { organizationJsonLd, SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -16,6 +18,26 @@ export class Home implements AfterViewInit, OnDestroy {
   protected readonly units = this.unitsService.getAll();
   private observer!: IntersectionObserver;
   private el = inject(ElementRef);
+  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+  private readonly seo = inject(SeoService);
+  private readonly translate = inject(TranslateService);
+
+  constructor() {
+    effect(() => {
+      const lang = this.lang.current();
+      const description = this.translate.instant('FOOTER.DESC');
+      this.seo.update({
+        title:
+          lang === 'hr'
+            ? 'Avalena – apartmani i sobe u Boriku, Zadar'
+            : 'Avalena – Apartments & Rooms in Borik, Zadar',
+        description,
+        path: '/',
+        lang,
+        jsonLd: organizationJsonLd(description),
+      });
+    });
+  }
 
   getTagline(unit: any): string {
     return this.lang.current() === 'hr' ? unit.taglineHr : unit.taglineEn;
@@ -25,6 +47,7 @@ export class Home implements AfterViewInit, OnDestroy {
   }
 
   ngAfterViewInit(): void {
+    if (!this.isBrowser) return;
     // Scroll reveal
     this.observer = new IntersectionObserver(
       (entries) =>

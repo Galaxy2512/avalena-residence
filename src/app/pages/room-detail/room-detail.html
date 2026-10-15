@@ -12,9 +12,9 @@
 
   <div class="container">
     <nav class="room-breadcrumb">
-      <a routerLink="/">{{ 'BREADCRUMB.HOME' | translate }}</a>
+      <a [routerLink]="lang.path('home')">{{ 'BREADCRUMB.HOME' | translate }}</a>
       <span>/</span>
-      <a [routerLink]="['/smjestaj', unit.id]">{{ unit.name }}</a>
+      <a [routerLink]="lang.path('unit', unit.id)">{{ unit.name }}</a>
       <span>/</span>
       <span class="is-current">{{ roomName }}</span>
     </nav>
@@ -58,7 +58,7 @@
         </div>
       </div>
       <a href="mailto:info&#64;avalena.hr" class="btn btn-outline-light">{{ 'ROOM.BOOK_CTA' | translate }}</a>
-      <a [routerLink]="['/smjestaj', unit.id]" class="btn" style="color:rgba(245,242,236,.5);border-color:rgba(255,255,255,.12);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;padding:.8rem 1.4rem">
+      <a [routerLink]="lang.path('unit', unit.id)" class="btn" style="color:rgba(245,242,236,.5);border-color:rgba(255,255,255,.12);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;padding:.8rem 1.4rem">
         ← {{ lang.current() === 'hr' ? 'Sve sobe' : 'All rooms' }}
       </a>
     </aside>
@@ -85,7 +85,7 @@
     <h2>{{ lang.current() === 'hr' ? 'Ostale sobe — ' + unit.name : 'Other rooms at ' + unit.name }}</h2>
     <div class="other-rooms__grid">
       @for (r of otherRooms(); track r.id) {
-        <a [routerLink]="['/smjestaj', unit.id, r.id]" class="other-room">
+        <a [routerLink]="lang.path('room', unit.id, r.id)" class="other-room">
           <div class="other-room__img-wrap">
             <img [src]="r.heroImage" [alt]="otherRoomName(r)" class="other-room__img" />
           </div>
@@ -103,6 +103,6 @@
 } @else {
 <div class="not-found container">
   <h2>{{ 'NOT_FOUND.TITLE' | translate }}</h2>
-  <a routerLink="/" class="btn btn-outline-dark">{{ 'NOT_FOUND.BACK' | translate }}</a>
+  <a [routerLink]="lang.path('home')" class="btn btn-outline-dark">{{ 'NOT_FOUND.BACK' | translate }}</a>
 </div>
 }

@@ -22,7 +22,7 @@ export class PrivacyPolicy {
       this.seo.update({
         title: `${this.translate.instant('LEGAL.PRIVACY_POLICY')} | Avalena`,
         description: lang === 'hr' ? 'Politika privatnosti web stranice Avalena – smještaj u Boriku, Zadar.' : 'Privacy policy of the Avalena website – accommodation in Borik, Zadar.',
-        path: '/politika-privatnosti',
+        path: this.lang.path('privacy'),
         lang,
       });
     });

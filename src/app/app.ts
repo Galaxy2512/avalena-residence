@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './shared/navbar/navbar';
 import { Footer } from './shared/footer/footer';
@@ -22,9 +22,7 @@ import { LangService } from './services/lang.service';
     `,
   ],
 })
-export class App implements OnInit {
+export class App {
+  // Kreira LangService odmah pri pokretanju, da jezik prati adresu od prve stranice.
   private readonly lang = inject(LangService);
-  ngOnInit(): void {
-    this.lang.set(this.lang.current());
-  }
 }

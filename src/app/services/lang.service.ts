@@ -1,34 +1,72 @@
 import { DOCUMENT, Injectable, PLATFORM_ID, inject, signal } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
+import { NavigationEnd, Router, RoutesRecognized } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { filter, take } from 'rxjs';
+import { Lang, Page, langFromUrl, pagePath, translateUrl } from '../i18n-routes';
 
-export type Lang = 'hr' | 'en';
+export type { Lang } from '../i18n-routes';
 
+/** Jezik se određuje iz adrese stranice (/en/... = engleski, ostalo = hrvatski). */
 @Injectable({ providedIn: 'root' })
 export class LangService {
   private readonly STORAGE_KEY = 'avalena_lang';
-  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
+  private readonly router = inject(Router);
+  private readonly translate = inject(TranslateService);
   private readonly document = inject(DOCUMENT);
-  readonly current = signal<Lang>(this.getInitialLang());
+  private readonly isBrowser = isPlatformBrowser(inject(PLATFORM_ID));
 
-  constructor(private translate: TranslateService) {
-    this.translate.use(this.current());
+  readonly current = signal<Lang>('hr');
+
+  constructor() {
+    this.apply('hr');
+
+    this.router.events
+      .pipe(filter((e): e is RoutesRecognized => e instanceof RoutesRecognized))
+      .subscribe((e) => this.apply(langFromUrl(e.urlAfterRedirects)));
+
+    // Gost koji je ranije odabrao drugi jezik automatski dobiva tu verziju stranice.
+    if (this.isBrowser) {
+      this.router.events
+        .pipe(
+          filter((e): e is NavigationEnd => e instanceof NavigationEnd),
+          take(1),
+        )
+        .subscribe((e) => {
+          const stored = this.storedPreference();
+          if (stored && stored !== langFromUrl(e.urlAfterRedirects)) {
+            this.router.navigateByUrl(translateUrl(e.urlAfterRedirects, stored), {
+              replaceUrl: true,
+            });
+          }
+        });
+    }
   }
 
-  toggle(): void { this.set(this.current() === 'hr' ? 'en' : 'hr'); }
+  /** Putanja stranice na trenutnom jeziku, za [routerLink]. */
+  path(page: Page, ...ids: string[]): string {
+    return pagePath(this.current(), page, ...ids);
+  }
 
-  set(lang: Lang): void {
+  /** Adresa trenutne stranice na zadanom jeziku. */
+  alternateUrl(lang: Lang): string {
+    return translateUrl(this.router.url, lang);
+  }
+
+  /** Prebacuje na isti sadržaj na drugom jeziku i pamti izbor. */
+  switchTo(lang: Lang): void {
+    if (this.isBrowser) localStorage.setItem(this.STORAGE_KEY, lang);
+    this.router.navigateByUrl(this.alternateUrl(lang));
+  }
+
+  private apply(lang: Lang): void {
     this.current.set(lang);
     this.translate.use(lang);
-    if (this.isBrowser) localStorage.setItem(this.STORAGE_KEY, lang);
     this.document.documentElement.lang = lang;
   }
 
-  private getInitialLang(): Lang {
-    // Prerenderirane stranice se generiraju na hrvatskom.
-    if (!this.isBrowser) return 'hr';
-    const stored = localStorage.getItem(this.STORAGE_KEY) as Lang | null;
-    if (stored === 'hr' || stored === 'en') return stored;
-    return navigator.language.startsWith('hr') ? 'hr' : 'en';
+  private storedPreference(): Lang | null {
+    const stored = localStorage.getItem(this.STORAGE_KEY);
+    return stored === 'hr' || stored === 'en' ? stored : null;
   }
 }

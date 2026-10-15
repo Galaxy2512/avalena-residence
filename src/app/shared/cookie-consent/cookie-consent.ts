@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
 import { ConsentService } from '../../services/consent.service';
+import { LangService } from '../../services/lang.service';
 
 @Component({
   selector: 'app-cookie-consent',
@@ -11,6 +12,7 @@ import { ConsentService } from '../../services/consent.service';
 })
 export class CookieConsent {
   protected readonly consent = inject(ConsentService);
+  protected readonly lang = inject(LangService);
 
   openSettings(): void {
     this.consent.isDetailed.set(true);

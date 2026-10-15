@@ -37,12 +37,12 @@ export class RoomDetail {
     effect(() => {
       const data = this.data();
       const lang = this.lang.current();
-      if (!data) return;
+      if (!data) return this.seo.notFound(lang);
       const { unit, room } = data;
       this.seo.update({
         title: `${lang === 'hr' ? room.name : room.nameEn} – ${unit.name}, Borik, Zadar`,
         description: lang === 'hr' ? room.descriptionHr : room.descriptionEn,
-        path: `/smjestaj/${unit.id}/${room.id}`,
+        path: this.lang.path('room', unit.id, room.id),
         image: room.heroImage,
         lang,
       });

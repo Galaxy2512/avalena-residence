@@ -9,7 +9,7 @@
 
   <div class="legal-breadcrumb">
     <nav class="container">
-      <a routerLink="/">{{ 'BREADCRUMB.HOME' | translate }}</a>
+      <a [routerLink]="lang.path('home')">{{ 'BREADCRUMB.HOME' | translate }}</a>
       <span>/</span>
       <span class="is-current">{{ 'BREADCRUMB.COOKIES' | translate }}</span>
     </nav>
@@ -96,7 +96,7 @@
           Nužna lokalna pohrana ne zahtijeva vaš pristanak jer je neophodna za rad stranice.
           Za sve ostale kategorije tražimo vašu izričitu privolu prije aktivacije, a privolu
           možete povući u svakom trenutku putem postavki kolačića. Više o obradi osobnih podataka
-          pročitajte u našoj <a routerLink="/politika-privatnosti">Politici privatnosti</a>.
+          pročitajte u našoj <a [routerLink]="lang.path('privacy')">Politici privatnosti</a>.
         </p>
 
       } @else {
@@ -174,7 +174,7 @@
           to function. For all other categories we ask for your explicit consent before
           activation, and you can withdraw it at any time via the cookie settings. Read more about
           how we process personal data in our
-          <a routerLink="/politika-privatnosti">Privacy Policy</a>.
+          <a [routerLink]="lang.path('privacy')">Privacy Policy</a>.
         </p>
 
       }

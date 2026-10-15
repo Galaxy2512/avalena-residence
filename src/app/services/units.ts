@@ -23,13 +23,13 @@ export class Units {
         'Avalena Residence offers apartments suited to families and guests planning longer stays in Borik. Each apartment has a separate living room, fully equipped kitchen and private terrace or balcony. Air conditioning, free WiFi and parking included. 600 m from the sea.',
       addressHr: 'Borik, Zadar',
       addressEn: 'Borik, Zadar',
-      heroImage: '/images/residence/residence-naslovna.jpg',
+      heroImage: '/images/residence/residence-naslovna.webp',
       gallery: [
-        '/images/residence/Druga.jpg',
-        '/images/residence/Prva.jpg',
+        '/images/residence/Druga.webp',
+        '/images/residence/Prva.webp',
 
-        '/images/residence/Treca.jpg',
-        '/images/residence/Cetvrta.jpg',
+        '/images/residence/Treca.webp',
+        '/images/residence/Cetvrta.webp',
       ],
       rooms: [
         {
@@ -78,8 +78,8 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/Double Room with Balcony.jpg',
-          gallery: ['/images/residence/582404466.jpg', '/images/residence/883201012.jpg'],
+          heroImage: '/images/residence/Double Room with Balcony.webp',
+          gallery: ['/images/residence/582404466.webp', '/images/residence/883201012.webp'],
         },
         {
           id: 'dvokrevetna',
@@ -127,8 +127,8 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/Double Rooms.jpg',
-          gallery: ['/images/residence/dvor.jpg', '/images/residence/Double Rooms.jpg'],
+          heroImage: '/images/residence/Double Rooms.webp',
+          gallery: ['/images/residence/dvor.webp', '/images/residence/Double Rooms.webp'],
         },
         {
           id: 'cetverokrevetna',
@@ -181,8 +181,8 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/Trokrevetna.jpg',
-          gallery: ['/images/residence/883201012.jpg', '/images/residence/Trokrevetna.jpg'],
+          heroImage: '/images/residence/Trokrevetna.webp',
+          gallery: ['/images/residence/883201012.webp', '/images/residence/Trokrevetna.webp'],
         },
 
         {
@@ -231,8 +231,8 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/King size.jpg',
-          gallery: ['/images/residence/King size.jpg', '/images/residence/King size.jpg'],
+          heroImage: '/images/residence/King size.webp',
+          gallery: ['/images/residence/King size.webp', '/images/residence/King size.webp'],
         },
         {
           id: 'trokrevetna-terasa',
@@ -285,10 +285,10 @@ export class Units {
             'Slippers',
             'Hairdryer',
           ],
-          heroImage: '/images/residence/Trokrevetna soba sa terasom.jpg',
+          heroImage: '/images/residence/Trokrevetna soba sa terasom.webp',
           gallery: [
-            '/images/residence/Trokrevetna soba sa terasom.jpg',
-            '/images/residence/Trokrevetna soba sa terasom.jpg',
+            '/images/residence/Trokrevetna soba sa terasom.webp',
+            '/images/residence/Trokrevetna soba sa terasom.webp',
           ],
         },
         {
@@ -346,11 +346,11 @@ export class Units {
             'Slippers',
             'Hairdryer',
           ],
-          heroImage: '/images/residence/Trokrevetna soba Deluxe.jpg',
+          heroImage: '/images/residence/Trokrevetna soba Deluxe.webp',
           gallery: [
-            '/images/residence/Trokrevetna soba Deluxe.jpg',
-            '/images/residence/Trokrevetna soba Deluxe.jpg',
-            '/images/residence/Trokrevetna soba Deluxe.jpg',
+            '/images/residence/Trokrevetna soba Deluxe.webp',
+            '/images/residence/Trokrevetna soba Deluxe.webp',
+            '/images/residence/Trokrevetna soba Deluxe.webp',
           ],
         },
         {
@@ -402,8 +402,8 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/Standardna cetvernokrevetna.jpg',
-          gallery: ['/images/residence/582404466.jpg', '/images/residence/883201012.jpg'],
+          heroImage: '/images/residence/Standardna cetvernokrevetna.webp',
+          gallery: ['/images/residence/582404466.webp', '/images/residence/883201012.webp'],
         },
         {
           id: 'trokrevetna-balkon',
@@ -454,8 +454,8 @@ export class Units {
             'Hairdryer',
             'Heating',
           ],
-          heroImage: '/images/residence/Trokrevetna soba sa balkonom.jpg',
-          gallery: ['/images/residence/bazen2.jpg', '/images/residence/dvor.jpg'],
+          heroImage: '/images/residence/Trokrevetna soba sa balkonom.webp',
+          gallery: ['/images/residence/bazen2.webp', '/images/residence/dvor.webp'],
         },
       ],
     },
@@ -478,12 +478,12 @@ export class Units {
         'Avalena Vila Ines is set in a quiet part of Borik, 600 m from a pebbly beach. The villa features an 80 m² seasonal outdoor pool, a large Mediterranean garden with terraces and gazebos, and the art gallery of owner Dr. Ines Jurin. Rooms are air-conditioned, decorated with original paintings, with sea or garden views. Private bathroom with shower, hairdryer and robes. Free parking for all guests.',
       addressHr: 'Borik, Zadar',
       addressEn: 'Borik, Zadar',
-      heroImage: '/images/vila-ines/Avalena_Vila_Ines.jpg',
+      heroImage: '/images/vila-ines/Avalena_Vila_Ines.webp',
       gallery: [
-        '/images/vila-ines/Druga.jpg',
-        '/images/vila-ines/Treca.jpg',
-        '/images/vila-ines/Cetvrta.jpg',
-        '/images/vila-ines/Prva.jpg',
+        '/images/vila-ines/Druga.webp',
+        '/images/vila-ines/Treca.webp',
+        '/images/vila-ines/Cetvrta.webp',
+        '/images/vila-ines/Prva.webp',
       ],
       rooms: [
         {
@@ -554,12 +554,12 @@ export class Units {
             'Upper floors accessible by stairs only',
             'No smoking',
           ],
-          heroImage: '/images/vila-ines/Dobule Room with Balcony.jpg',
+          heroImage: '/images/vila-ines/Dobule Room with Balcony.webp',
           gallery: [
-            '/images/vila-ines/528894444.jpg',
-            '/images/vila-ines/582271891.jpg',
-            '/images/vila-ines/582272087.jpg',
-            '/images/vila-ines/883427780.jpg',
+            '/images/vila-ines/528894444.webp',
+            '/images/vila-ines/582271891.webp',
+            '/images/vila-ines/582272087.webp',
+            '/images/vila-ines/883427780.webp',
           ],
         },
         {
@@ -626,11 +626,11 @@ export class Units {
             'Upper floors accessible by stairs only',
             'No smoking',
           ],
-          heroImage: '/images/vila-ines/Double Room.jpg',
+          heroImage: '/images/vila-ines/Double Room.webp',
           gallery: [
-            '/images/vila-ines/582271891.jpg',
-            '/images/vila-ines/528894444.jpg',
-            '/images/vila-ines/582272087.jpg',
+            '/images/vila-ines/582271891.webp',
+            '/images/vila-ines/528894444.webp',
+            '/images/vila-ines/582272087.webp',
           ],
         },
         {
@@ -703,11 +703,11 @@ export class Units {
             'Heating',
             'No smoking',
           ],
-          heroImage: '/images/vila-ines/Quadruple room.jpg',
+          heroImage: '/images/vila-ines/Quadruple room.webp',
           gallery: [
-            '/images/vila-ines/582272087.jpg',
-            '/images/vila-ines/883427780.jpg',
-            '/images/vila-ines/528894444.jpg',
+            '/images/vila-ines/582272087.webp',
+            '/images/vila-ines/883427780.webp',
+            '/images/vila-ines/528894444.webp',
           ],
         },
         {
@@ -785,12 +785,12 @@ export class Units {
             'Heating',
             'No smoking',
           ],
-          heroImage: '/images/vila-ines/One Bedroom apartment.jpg',
+          heroImage: '/images/vila-ines/One Bedroom apartment.webp',
           gallery: [
-            '/images/vila-ines/883427780.jpg',
-            '/images/vila-ines/582272087.jpg',
-            '/images/vila-ines/582271891.jpg',
-            '/images/vila-ines/528894444.jpg',
+            '/images/vila-ines/883427780.webp',
+            '/images/vila-ines/582272087.webp',
+            '/images/vila-ines/582271891.webp',
+            '/images/vila-ines/528894444.webp',
           ],
         },
         {
@@ -878,12 +878,12 @@ export class Units {
             'Upper floors accessible by stairs only',
             'No smoking',
           ],
-          heroImage: '/images/vila-ines/Suite.jpg',
+          heroImage: '/images/vila-ines/Suite.webp',
           gallery: [
-            '/images/vila-ines/528894444.jpg',
-            '/images/vila-ines/582271891.jpg',
-            '/images/vila-ines/582272087.jpg',
-            '/images/vila-ines/883427780.jpg',
+            '/images/vila-ines/528894444.webp',
+            '/images/vila-ines/582271891.webp',
+            '/images/vila-ines/582272087.webp',
+            '/images/vila-ines/883427780.webp',
           ],
         },
       ],
@@ -907,12 +907,12 @@ export class Units {
         'Avalena Rooms offers a variety of room categories suited to couples, families and travellers looking for a comfortable stay in Borik. All rooms feature air conditioning, flat-screen TV, WiFi, a fridge and a private bathroom. Check-in from 15:00, check-out by 10:00.',
       addressHr: 'Ul. Augusta Šenoe 22, Borik, Zadar',
       addressEn: 'Ul. Augusta Šenoe 22, Borik, Zadar',
-      heroImage: '/images/rooms/Naslovna_Rooms.jpg',
+      heroImage: '/images/rooms/Naslovna_Rooms.webp',
       gallery: [
-        '/images/rooms/558049770.jpg',
-        '/images/rooms/558689713.jpg',
-        '/images/rooms/563273867.jpg',
-        '/images/rooms/563539042.jpg',
+        '/images/rooms/558049770.webp',
+        '/images/rooms/558689713.webp',
+        '/images/rooms/563273867.webp',
+        '/images/rooms/563539042.webp',
       ],
       rooms: [
         {
@@ -951,7 +951,7 @@ export class Units {
             'Heating',
             'Electric kettle',
           ],
-          heroImage: '/images/rooms/Double room with balcony.jpg',
+          heroImage: '/images/rooms/Double room with balcony.webp',
           gallery: [
             'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=85&w=1200&auto=format&fit=crop',
             'https://images.unsplash.com/photo-1560185007-5f0bb1866cab?q=85&w=1200&auto=format&fit=crop',
@@ -990,7 +990,7 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage: '/images/rooms/Double bed.jpg',
+          heroImage: '/images/rooms/Double bed.webp',
 
           gallery: [
             'https://images.unsplash.com/photo-1505693314120-0d443867891c?q=85&w=1200&auto=format&fit=crop',
@@ -1030,7 +1030,7 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage: '/images/rooms/Lowbudget.jpg', //treba mjenjati sve
+          heroImage: '/images/rooms/Lowbudget.webp', //treba mjenjati sve
           gallery: [
             'https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=85&w=1200&auto=format&fit=crop',
             'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1200&auto=format&fit=crop',
@@ -1074,7 +1074,7 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage: '/images/rooms/Triple with balcony.jpg',
+          heroImage: '/images/rooms/Triple with balcony.webp',
 
           gallery: [
             'https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=85&w=1200&auto=format&fit=crop',
@@ -1115,7 +1115,7 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage: '/images/rooms/Triple economy.jpg',
+          heroImage: '/images/rooms/Triple economy.webp',
 
           gallery: [
             'https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=85&w=1200&auto=format&fit=crop',
@@ -1158,7 +1158,7 @@ export class Units {
             'Hardwood floor',
             'Heating',
           ],
-          heroImage: '/images/rooms/Quadriple.jpg',
+          heroImage: '/images/rooms/Quadriple.webp',
 
           gallery: [
             'https://images.unsplash.com/photo-1578683010236-d716f9a3f461?q=85&w=1200&auto=format&fit=crop',
@@ -1186,12 +1186,12 @@ export class Units {
         'Avalena Penthouse is a 200 m² luxury apartment on the top floor with city views and a panoramic terrace. The apartment features five bedrooms, five bathrooms, a large living room with a 49" Smart TV, a fully equipped kitchen (dishwasher, hob, microwave) and a washing machine. All beds exceed 2 metres. Netflix and streaming services available.',
       addressHr: 'Ul. Augusta Šenoe 22, Borik, Zadar',
       addressEn: 'Ul. Augusta Šenoe 22, Borik, Zadar',
-      heroImage: '/images/penthouse/Avalena_Penthouse.jpg',
+      heroImage: '/images/penthouse/Avalena_Penthouse.webp',
       gallery: [
-        '/images/penthouse/terasa.jpg',
-        '/images/penthouse/dnevni-boravak.jpg',
-        '/images/penthouse/soba1-bracni.jpg',
-        '/images/penthouse/soba5-zlatna.jpg',
+        '/images/penthouse/terasa.webp',
+        '/images/penthouse/dnevni-boravak.webp',
+        '/images/penthouse/soba1-bracni.webp',
+        '/images/penthouse/soba5-zlatna.webp',
       ],
       rooms: [
         {
@@ -1238,15 +1238,15 @@ export class Units {
             'Netflix/Streaming',
             'Beds > 2 m',
           ],
-          heroImage: '/images/penthouse/Avalena.jpg',
+          heroImage: '/images/penthouse/Avalena.webp',
           gallery: [
-            '/images/penthouse/terasa.jpg',
-            '/images/penthouse/dnevni-boravak.jpg',
-            '/images/penthouse/soba1-bracni.jpg',
-            '/images/penthouse/soba2-bracni.jpg',
-            '/images/penthouse/soba3-prozor.jpg',
-            '/images/penthouse/soba4-bracni.jpg',
-            '/images/penthouse/soba5-zlatna.jpg',
+            '/images/penthouse/terasa.webp',
+            '/images/penthouse/dnevni-boravak.webp',
+            '/images/penthouse/soba1-bracni.webp',
+            '/images/penthouse/soba2-bracni.webp',
+            '/images/penthouse/soba3-prozor.webp',
+            '/images/penthouse/soba4-bracni.webp',
+            '/images/penthouse/soba5-zlatna.webp',
           ],
         },
       ],

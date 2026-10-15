@@ -6,7 +6,7 @@
 
     <!-- LOGO UMJESTO LINKA POČETNA -->
     <a
-      routerLink="/"
+      [routerLink]="lang.path('home')"
       class="navbar__logo"
       aria-label="Avalena početna stranica"
       (click)="closeMenu()"
@@ -27,7 +27,7 @@
     >
       @for (unit of units; track unit.id) {
         <a
-          [routerLink]="['/smjestaj', unit.id]"
+          [routerLink]="lang.path('unit', unit.id)"
           routerLinkActive="is-active"
           (click)="closeMenu()"
         >
@@ -38,24 +38,31 @@
 
     <!-- JEZIK -->
     <div class="navbar__actions">
-      <button
-        type="button"
-        class="navbar__lang"
-        (click)="lang.toggle()"
-        aria-label="Promijeni jezik"
-      >
-        <span [class.is-active]="lang.current() === 'hr'">
-          HR
-        </span>
+      <div class="navbar__lang">
+        <a
+          [href]="lang.alternateUrl('hr')"
+          hreflang="hr"
+          lang="hr"
+          aria-label="Hrvatski"
+          (click)="switchLang($event, 'hr')"
+        >
+          <span [class.is-active]="lang.current() === 'hr'">HR</span>
+        </a>
 
         <span class="navbar__lang-sep">
           |
         </span>
 
-        <span [class.is-active]="lang.current() === 'en'">
-          EN
-        </span>
-      </button>
+        <a
+          [href]="lang.alternateUrl('en')"
+          hreflang="en"
+          lang="en"
+          aria-label="English"
+          (click)="switchLang($event, 'en')"
+        >
+          <span [class.is-active]="lang.current() === 'en'">EN</span>
+        </a>
+      </div>
     </div>
 
     <!-- MOBILNI MENI -->

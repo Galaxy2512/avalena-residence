@@ -2,7 +2,7 @@
 <section class="hero">
   <div class="hero__bg">
     <img
-      src="/images/ZA%20NASLOVNU.jpg"
+      src="/images/ZA%20NASLOVNU.webp"
       alt="Jadranska obala"
       class="hero__img"
     />
@@ -18,7 +18,7 @@
   <div class="hero__divider reveal reveal-delay-2"></div>
 
   <a
-    routerLink="/"
+    [routerLink]="lang.path('home')"
     fragment="smjestaj"
     class="btn btn-outline-light reveal reveal-delay-3"
   >
@@ -131,7 +131,7 @@
       [class.unit-row--reverse]="i % 2 === 1"
     >
       <a
-        [routerLink]="['/smjestaj', unit.id]"
+        [routerLink]="lang.path('unit', unit.id)"
         class="unit-row__img-wrap"
       >
         <img
@@ -166,7 +166,7 @@
         </div>
 
         <a
-          [routerLink]="['/smjestaj', unit.id]"
+          [routerLink]="lang.path('unit', unit.id)"
           class="btn btn-outline-navy"
         >
           {{ 'HOME.EXPLORE' | translate }}

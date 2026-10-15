@@ -8,9 +8,9 @@
             <h2>{{ 'COOKIES.TITLE' | translate }}</h2>
             <p>
               {{ 'COOKIES.TEXT' | translate }}
-              <a routerLink="/politika-privatnosti">{{ 'COOKIES.PRIVACY_LINK' | translate }}</a>
+              <a [routerLink]="lang.path('privacy')">{{ 'COOKIES.PRIVACY_LINK' | translate }}</a>
               {{ 'COOKIES.AND' | translate }}
-              <a routerLink="/politika-kolacica">{{ 'COOKIES.COOKIE_LINK' | translate }}</a>.
+              <a [routerLink]="lang.path('cookies')">{{ 'COOKIES.COOKIE_LINK' | translate }}</a>.
             </p>
           </div>
 

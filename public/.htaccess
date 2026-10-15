@@ -18,10 +18,12 @@ DirectorySlash Off
   RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
   RewriteRule ^(.+)$ /$1/index.html [L]
 
-  # Postojeće datoteke (slike, JS, CSS...) se poslužuju izravno
-  RewriteCond %{REQUEST_FILENAME} -f
-  RewriteRule ^ - [L]
-
-  # Sve ostalo prepušta Angular routeru
-  RewriteRule ^ /index.csr.html [L]
+  # Mape bez stranice (npr. /smjestaj ili /en/accommodation) -> 404
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteCond %{REQUEST_URI} !^/$
+  RewriteRule ^ - [R=404,L]
 </IfModule>
+
+# Nepostojeće adrese vraćaju status 404 (ne naslovnicu), a stranicu
+# "nije pronađeno" na odgovarajućem jeziku prikazuje Angular.
+ErrorDocument 404 /index.csr.html

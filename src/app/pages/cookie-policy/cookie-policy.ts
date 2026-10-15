@@ -24,7 +24,7 @@ export class CookiePolicy {
       this.seo.update({
         title: `${this.translate.instant('LEGAL.COOKIE_POLICY')} | Avalena`,
         description: lang === 'hr' ? 'Politika kolačića web stranice Avalena – smještaj u Boriku, Zadar.' : 'Cookie policy of the Avalena website – accommodation in Borik, Zadar.',
-        path: '/politika-kolacica',
+        path: this.lang.path('cookies'),
         lang,
       });
     });

@@ -9,7 +9,7 @@
 
   <div class="legal-breadcrumb">
     <nav class="container">
-      <a routerLink="/">{{ 'BREADCRUMB.HOME' | translate }}</a>
+      <a [routerLink]="lang.path('home')">{{ 'BREADCRUMB.HOME' | translate }}</a>
       <span>/</span>
       <span class="is-current">{{ 'BREADCRUMB.PRIVACY' | translate }}</span>
     </nav>
@@ -49,7 +49,7 @@
             (tzv. local storage, ne klasični kolačić) pohranjuje odabrani jezik prikaza i vaš
             odabir postavki privatnosti/kolačića. Ti se podaci ne šalju na naše poslužitelje.
             Više informacija potražite u našoj
-            <a routerLink="/politika-kolacica">Politici kolačića</a>.
+            <a [routerLink]="lang.path('cookies')">Politici kolačića</a>.
           </li>
           <li>
             <strong>Podaci koje bilježi hosting pružatelj</strong> — poput svake internetske
@@ -71,7 +71,7 @@
         <p>
           Detaljan popis podataka koje pohranjujemo u vašem pregledniku, njihovu svrhu i trajanje
           te način upravljanja postavkama pronaći ćete u našoj
-          <a routerLink="/politika-kolacica">Politici kolačića</a>.
+          <a [routerLink]="lang.path('cookies')">Politici kolačića</a>.
         </p>
 
         <h2>5. Razdoblje čuvanja podataka</h2>
@@ -165,7 +165,7 @@
             <strong>Technical data in your browser</strong> — the site stores your chosen display
             language and your cookie/privacy preferences locally in your browser (local storage,
             not a classic cookie). This data is never sent to our servers. See our
-            <a routerLink="/politika-kolacica">Cookie Policy</a> for details.
+            <a [routerLink]="lang.path('cookies')">Cookie Policy</a> for details.
           </li>
           <li>
             <strong>Data logged by our hosting provider</strong> — like any website, the server
@@ -185,7 +185,7 @@
         <h2>4. Cookies and similar technologies</h2>
         <p>
           For a detailed list of what we store in your browser, why, for how long, and how to
-          manage your preferences, see our <a routerLink="/politika-kolacica">Cookie Policy</a>.
+          manage your preferences, see our <a [routerLink]="lang.path('cookies')">Cookie Policy</a>.
         </p>
 
         <h2>5. Data retention</h2>

@@ -1,7 +1,7 @@
 import { Component, DOCUMENT, inject, OnDestroy, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { Units } from '../../services/units';
-import { LangService } from '../../services/lang.service';
+import { Lang, LangService } from '../../services/lang.service';
 
 @Component({
   selector: 'app-navbar',
@@ -19,6 +19,12 @@ export class Navbar implements OnDestroy {
   toggleMenu(): void {
     this.isMenuOpen.update((o) => !o);
     this.updateBodyScroll();
+  }
+
+  switchLang(event: MouseEvent, lang: Lang): void {
+    event.preventDefault();
+    this.closeMenu();
+    this.lang.switchTo(lang);
   }
 
   closeMenu(): void {

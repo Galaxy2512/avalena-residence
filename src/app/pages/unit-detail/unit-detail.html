@@ -11,7 +11,7 @@
 
   <div class="unit-breadcrumb">
     <nav class="container">
-      <a routerLink="/">{{ 'BREADCRUMB.HOME' | translate }}</a>
+      <a [routerLink]="lang.path('home')">{{ 'BREADCRUMB.HOME' | translate }}</a>
       <span>/</span>
       <span class="is-current">{{ unit()!.name }}</span>
     </nav>
@@ -75,7 +75,7 @@
             }
           </ul>
 
-          <a [routerLink]="['/smjestaj', unit()!.id, room.id]" class="btn btn-outline-dark">
+          <a [routerLink]="lang.path('room', unit()!.id, room.id)" class="btn btn-outline-dark">
             {{ 'UNIT.VIEW_ROOM' | translate }}
           </a>
         </div>
@@ -106,7 +106,7 @@
       <h2>{{ 'UNIT.OTHERS_TITLE' | translate }}</h2>
       <div class="others-grid">
         @for (other of otherUnits(unit()); track other.id) {
-          <a [routerLink]="['/smjestaj', other.id]" class="other-card">
+          <a [routerLink]="lang.path('unit', other.id)" class="other-card">
             <img [src]="other.heroImage" [alt]="other.name" />
             <div class="other-card__overlay"></div>
             <div class="other-card__info">
@@ -123,6 +123,6 @@
 } @else {
 <div class="not-found container">
   <h2>{{ 'NOT_FOUND.TITLE' | translate }}</h2>
-  <a routerLink="/" class="btn btn-outline-dark">{{ 'NOT_FOUND.BACK' | translate }}</a>
+  <a [routerLink]="lang.path('home')" class="btn btn-outline-dark">{{ 'NOT_FOUND.BACK' | translate }}</a>
 </div>
 }

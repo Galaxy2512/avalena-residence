@@ -38,11 +38,11 @@ export class UnitDetail {
     effect(() => {
       const unit = this.unit();
       const lang = this.lang.current();
-      if (!unit) return;
+      if (!unit) return this.seo.notFound(lang);
       this.seo.update({
         title: `${unit.name} – ${lang === 'hr' ? 'smještaj u Boriku, Zadar' : 'accommodation in Borik, Zadar'}`,
         description: lang === 'hr' ? unit.descriptionHr : unit.descriptionEn,
-        path: `/smjestaj/${unit.id}`,
+        path: this.lang.path('unit', unit.id),
         image: unit.heroImage,
         lang,
         jsonLd: lodgingJsonLd(unit, lang),

@@ -32,9 +32,9 @@ export class Home implements AfterViewInit, OnDestroy {
             ? 'Avalena – apartmani i sobe u Boriku, Zadar'
             : 'Avalena – Apartments & Rooms in Borik, Zadar',
         description,
-        path: '/',
+        path: this.lang.path('home'),
         lang,
-        jsonLd: organizationJsonLd(description),
+        jsonLd: organizationJsonLd(description, lang),
       });
     });
   }

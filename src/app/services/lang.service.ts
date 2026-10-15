@@ -4,6 +4,7 @@ import { NavigationEnd, Router, RoutesRecognized } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { filter, take } from 'rxjs';
 import { Lang, Page, langFromUrl, pagePath, translateUrl } from '../i18n-routes';
+import { IMAGE_ALTS } from './image-alts';
 
 export type { Lang } from '../i18n-routes';
 
@@ -46,6 +47,11 @@ export class LangService {
   /** Putanja stranice na trenutnom jeziku, za [routerLink]. */
   path(page: Page, ...ids: string[]): string {
     return pagePath(this.current(), page, ...ids);
+  }
+
+  /** Alt tekst slike na trenutnom jeziku (iz image-alts.ts), ili `fallback` ako opis ne postoji. */
+  imageAlt(src: string, fallback: string): string {
+    return IMAGE_ALTS[src]?.[this.current()] ?? fallback;
   }
 
   /** Adresa trenutne stranice na zadanom jeziku. */

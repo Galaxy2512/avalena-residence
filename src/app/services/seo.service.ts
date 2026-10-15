@@ -5,7 +5,7 @@ import { RentalUnit } from './unit.model';
 
 export const SITE_URL = 'https://avalena.hr';
 const SITE_NAME = 'Avalena';
-const DEFAULT_IMAGE = '/images/ZA NASLOVNU.webp';
+const DEFAULT_IMAGE = '/images/zajednicko/avalena-bazen-vrt-borik-zadar.webp';
 const JSON_LD_ID = 'seo-json-ld';
 const TELEPHONE = '+385914747435';
 

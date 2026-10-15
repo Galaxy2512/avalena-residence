@@ -2,7 +2,7 @@
 <article class="room-page">
 
   <section class="room-hero">
-    <img class="room-hero__image" [src]="activeImage()" [alt]="roomName" />
+    <img class="room-hero__image" [src]="activeImage()" [alt]="lang.imageAlt(activeImage()!, roomName!)" />
     <div class="room-hero__overlay"></div>
     <div class="room-hero__content container">
       <span class="eyebrow eyebrow--light">{{ unit.name }}</span>
@@ -67,12 +67,12 @@
   <section class="room-gallery container">
     <span class="eyebrow">{{ 'ROOM.GALLERY_EYEBROW' | translate }}</span>
     <h2>{{ 'ROOM.GALLERY_TITLE' | translate }}</h2>
-    <div class="rg-main"><img [src]="activeImage()" [alt]="roomName" /></div>
+    <div class="rg-main"><img [src]="activeImage()" [alt]="lang.imageAlt(activeImage()!, roomName!)" /></div>
     @if (room.gallery.length > 1) {
       <div class="rg-thumbs">
         @for (img of room.gallery; track img) {
           <button type="button" class="rg-thumb" [class.is-active]="img === activeImage()" (click)="selectImage(img)">
-            <img [src]="img" [alt]="roomName" />
+            <img [src]="img" [alt]="lang.imageAlt(img, roomName!)" />
           </button>
         }
       </div>
@@ -87,7 +87,7 @@
       @for (r of otherRooms(); track r.id) {
         <a [routerLink]="lang.path('room', unit.id, r.id)" class="other-room">
           <div class="other-room__img-wrap">
-            <img [src]="r.heroImage" [alt]="otherRoomName(r)" class="other-room__img" />
+            <img [src]="r.heroImage" [alt]="lang.imageAlt(r.heroImage, otherRoomName(r))" class="other-room__img" />
           </div>
           <div class="other-room__info">
             <h4>{{ otherRoomName(r) }}</h4>

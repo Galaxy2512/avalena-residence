@@ -2,8 +2,8 @@
 <section class="hero">
   <div class="hero__bg">
     <img
-      src="/images/ZA%20NASLOVNU.webp"
-      alt="Jadranska obala"
+      src="/images/zajednicko/avalena-bazen-vrt-borik-zadar.webp"
+      [alt]="lang.imageAlt('/images/zajednicko/avalena-bazen-vrt-borik-zadar.webp', 'Avalena')"
       class="hero__img"
     />
 
@@ -136,7 +136,7 @@
       >
         <img
           [src]="unit.heroImage"
-          [alt]="unit.name"
+          [alt]="lang.imageAlt(unit.heroImage, unit.name)"
           class="unit-row__img"
         />
 
